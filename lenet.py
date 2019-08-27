@@ -7,6 +7,7 @@ class LeNet(nn.Module):
     def __init__(self, activation=F.relu):
         super(LeNet, self).__init__()
         self.activation = activation
+        self.logits = None
         self.conv1 = nn.Conv2d(1, 6, kernel_size=5, stride=1, padding=2)
         self.pool1 = nn.MaxPool2d(kernel_size=2)
         self.conv2 = nn.Conv2d(6, 16, kernel_size=5, stride=1, padding=0)
@@ -23,5 +24,5 @@ class LeNet(nn.Module):
         x = x.view(x.shape[0], -1)
         x = self.fc1_drop(self.activation(self.fc1(x)))
         x = self.fc2_drop(self.activation(self.fc2(x)))
-        x = self.fc3(x)
-        return F.log_softmax(x, dim=1)
+        self.logits = self.fc3(x)
+        return F.log_softmax(self.logits, dim=1)
