@@ -1,15 +1,13 @@
 import torch
 
 class SimpleGradientsAttack():
-    def __init__(self, net, net_proxy, sample, og_label, top_k=20, target=None, device=None):
+    def __init__(self, net, net_proxy, sample, og_label, top_k=20, target=None):
         """
         net: original network
         net_proxy: secondary network used to calculate gradient of attack loss w.r.t. 
             the input sample through the saliency map (i.e. this net does not have relu acivations)
-            non-relu activations)
         sample: original sample
         top_k: the number of features to consider when performing top-k attack
-        device: the number of the gpu that is being used
         """
         self.net = net
         self.net_proxy = net_proxy
@@ -20,7 +18,6 @@ class SimpleGradientsAttack():
         self.og_sample = torch.autograd.Variable(sample, requires_grad=True)
         self.top_k = top_k
         self.target = target
-        self.device = device
         self.og_saliency = self.create_saliency_map(self.net, self.og_sample)
         self.h = self.og_saliency.shape[-1]
         self.w = self.og_saliency.shape[-2]
@@ -41,14 +38,12 @@ class SimpleGradientsAttack():
         net(sample)
         logits = net.logits
         bp_mat = torch.nn.functional.one_hot(self.og_label, num_classes=10).float()
-        if self.device != None:
-            bp_mat = bp_mat.to(self.device)
-        logit = torch.sum(bp_mat * logits)
         grads = torch.autograd.grad(logits * bp_mat, sample, grad_outputs=bp_mat, create_graph=True)[0].squeeze()
         saliency = torch.abs(grads)
         saliency = saliency/torch.sum(saliency)
         # equivalent to 
-        # torch.autograd.grad(logit, sample)[0].squeeze()
+        # logit = torch.sum(bp_mat * logits)
+        # grads = torch.autograd.grad(logit, sample)[0].squeeze()
         return saliency
     
     def find_mass_center(self, saliency):
