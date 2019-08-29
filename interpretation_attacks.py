@@ -12,8 +12,10 @@ class SimpleGradientsAttack():
         self.net = net
         self.net_proxy = net_proxy
         self.og_label = og_label
+        self.can_attack = True
         if not self.prediction_correct(sample):
             print("Network's prediction incorrect. Attacking is meaningless.")
+            self.can_attack = False
             return
         self.og_sample = torch.autograd.Variable(sample, requires_grad=True)
         self.top_k = top_k
@@ -61,14 +63,14 @@ class SimpleGradientsAttack():
         """
         sample = torch.autograd.Variable(sample, requires_grad=True)
         saliency = self.create_saliency_map(self.net_proxy, sample)
-        if attack_method == 'top_k':
+        if attack_method == 'top-k':
             top_k_idxs = torch.argsort(saliency.reshape(self.w * self.h), descending=True)[:self.top_k]
             top_k_elems = torch.zeros(self.w * self.h)
             top_k_elems[top_k_idxs] = 1
             top_k_elems = top_k_elems * saliency.reshape(self.w * self.h)
             top_k_loss = torch.sum(top_k_elems)
             loss = top_k_loss
-        elif attack_method == 'mass_center':
+        elif attack_method == 'mass-center':
             mass_center = self.find_mass_center(saliency)
             mass_center_loss = torch.norm(self.og_mass_center - mass_center)
             loss = -mass_center_loss
@@ -92,17 +94,11 @@ class SimpleGradientsAttack():
         """
         for i in range(num_iters):
             perturbation = self.find_perturbation(sample, attack_method)
-            if i % 50 == 0:
-                print(f'iteration #{i}')
             candidate = self.apply_perturbation(sample, perturbation, alpha)
             if self.prediction_correct(candidate):
                 sample = candidate
             else:
                 break
-        return sample
-        
-        
-        
-        
+        return sample, i
         
             
