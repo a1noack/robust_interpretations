@@ -1,3 +1,4 @@
+import torch
 from advertorch.attacks import GradientSignAttack, CarliniWagnerL2Attack, PGDAttack
 
 def generate_adversarial_samples(og_samples, true_labels, adversary, num_per_samp=1):
