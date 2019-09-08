@@ -1,7 +1,7 @@
 import torch
-from interpretation_attacks import simple_gradient, smoothgrad
+import utils.interpretation_generators as igs
 
-class SimpleGradientsAttack():
+class InterpretationAttacker():
     def __init__(self, net, net_proxy, sample, og_label, top_k=20, target=None):
         """
         net: original network
@@ -21,8 +21,8 @@ class SimpleGradientsAttack():
         self.og_sample = torch.autograd.Variable(sample, requires_grad=True)
         self.top_k = top_k
         self.target = target
-        self.interpretation_generator = simple_gradient
-        self.og_saliency = self.interpretation_generator(self.net, self.og_sample)
+        self.interpretation_generator = igs.simple_gradient
+        self.og_saliency = self.interpretation_generator(self.net, self.og_sample, self.og_label)
         self.h = self.og_saliency.shape[-1]
         self.w = self.og_saliency.shape[-2]
         self.og_mass_center = self.find_mass_center(self.og_saliency)
@@ -31,11 +31,12 @@ class SimpleGradientsAttack():
         """Sets the mechanism used to create the interpretations.
         """
         if method == 'simple_gradient':
-            self.interpretation_generator = simple_gradient
+            self.interpretation_generator = igs.simple_gradient
         elif method == 'smoothgrad':
-            self.interpretation_generator = smoothgrad
+            self.interpretation_generator = igs.smoothgrad
         else:
             print(f'{method} is not supported')
+        self.og_saliency = self.interpretation_generator(self.net, self.og_sample, self.og_label)
 
     def prediction_correct(self, sample):
         """If network's prediction for the input is incorrect, attacking
@@ -58,7 +59,7 @@ class SimpleGradientsAttack():
         input sample so as to alter the saliency map in the desired manner.
         """
         sample = torch.autograd.Variable(sample, requires_grad=True)
-        saliency = self.interpretation_generator(self.net_proxy, sample)
+        saliency = self.interpretation_generator(self.net_proxy, sample, self.og_label)
         if attack_method == 'top-k':
             top_k_idxs = torch.argsort(saliency.reshape(self.w * self.h), descending=True)[:self.top_k]
             top_k_elems = torch.zeros(self.w * self.h)
