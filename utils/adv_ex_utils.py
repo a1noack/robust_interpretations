@@ -1,4 +1,5 @@
 import torch
+import torch.distributions as tdist
 from advertorch.attacks import GradientSignAttack, CarliniWagnerL2Attack, PGDAttack
 
 def generate_adv_exs(og_samples, true_labels, adversary, num_per_samp=1):
@@ -13,7 +14,7 @@ def generate_adv_exs(og_samples, true_labels, adversary, num_per_samp=1):
     adv_labels = torch.cat([true_labels]*num_per_samp, 0)
     return adv_samples, adv_labels
 
-def perturb_randomly(og_samples, scale=1.):
+def perturb_randomly(og_samples, scale=.1):
     """Add a random variable drawn from a normal distribution with 
     specified parameters to each dimension of each sample and return.
     """
