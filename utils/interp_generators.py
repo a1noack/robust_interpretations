@@ -2,7 +2,7 @@ import torch
 import torch.distributions as tdist
 
 def smoothgrad(net, sample, label, j=15, scale=1., used=True):
-    """Creates smoothgrad saliency map.
+    """Creates smoothgrad saliency map. Unparallelized.
     """
     if not used:
         sample = torch.autograd.Variable(sample, requires_grad=True)
@@ -20,7 +20,7 @@ def smoothgrad(net, sample, label, j=15, scale=1., used=True):
     saliency = saliency/torch.sum(saliency)
     return saliency
 
-def simple_gradients(net, samples, labels, used=True):
+def simple_gradient(net, samples, labels, used=True):
     """Parallelized version of simple gradient saliency map function.
     """
     if not used:
