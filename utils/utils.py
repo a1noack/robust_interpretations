@@ -13,7 +13,10 @@ def bp_matrix(batch_size, n_outputs):
     return torch.zeros(len(idx), n_outputs).scatter_(1, idx.unsqueeze(1), 1.)
 
 def rescale(sample):
+    """Rescales RGB image so that each pixel value is between zero and one.
+    """
     sample = (sample+sample.min())/(sample.max()-sample.min())
+    return sample
 
 def avg_norm_jacobian(net, x, n_outputs, bp_mat, for_loss=True):
     """Returns squared frobenius norm of the input-output Jacobian averaged 
@@ -33,12 +36,12 @@ def avg_norm_jacobian(net, x, n_outputs, bp_mat, for_loss=True):
     
     return j
 
-def norm_diff_interp(net, x, labels, ig=igs.simple_gradient, scale=.1):   
+def norm_diff_interp(net, x, labels, dataset, ig=igs.simple_gradient, scale=.1):   
     """Gets the norm of the difference between the interpretations generated
     at original data points x and randomly perturbed points x_.
     Also returns the interpretations generated for all of the data points.
     """
-    x_ = aus.perturb_randomly(x, scale=scale)
+    x_ = aus.perturb_randomly(x, dataset, scale=scale)
     ix = ig(net, x, labels, normalize=False, used=False)
     ix_ = ig(net, x_, labels, normalize=False, used=False)
     if torch.isnan(ix).any() or torch.isnan(ix_).any():
@@ -48,7 +51,7 @@ def norm_diff_interp(net, x, labels, ig=igs.simple_gradient, scale=.1):
 
 def my_loss(output, labels, net=None, 
             optimizer=None, alpha_wd=0, alpha_jr=0, 
-            x=None, bp_mat=None, alpha_ir1=0, alpha_ir2=0, scale=.1):
+            x=None, bp_mat=None, alpha_ir1=0, alpha_ir2=0, scale=.1, dataset='MNIST'):
     """Adds terms for L2-regularization and the norm of the input-output 
     Jacobian to the standard cross-entropy loss function. Check https://arxiv.org/abs/1908.02729
     for alpha_wd, alpha_jr suggestions.
@@ -73,7 +76,7 @@ def my_loss(output, labels, net=None,
     
     # add one or both of the interpretation regularization terms
     if alpha_ir1 != 0 or alpha_ir2 != 0:
-        norm, ix = norm_diff_interp(net, x, labels, scale=scale)
+        norm, ix = norm_diff_interp(net, x, labels, dataset=dataset, scale=scale)
         
         # add norm of difference between interpretations generated at x and x_
         if alpha_ir1 != 0:
