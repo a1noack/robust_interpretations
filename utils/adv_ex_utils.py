@@ -12,6 +12,7 @@ def generate_adv_exs(og_samples, true_labels, adversary, num_per_samp=1):
         adv_samples.append(adversary.perturb(og_samples, true_labels))
     adv_samples = torch.cat(adv_samples, 0)
     adv_labels = torch.cat([true_labels]*num_per_samp, 0)
+    
     return adv_samples, adv_labels
 
 def perturb_randomly(og_samples, scale=.1):
@@ -20,4 +21,7 @@ def perturb_randomly(og_samples, scale=.1):
     """
     normal = tdist.Normal(loc=torch.tensor([0.]), scale=torch.tensor([scale]))
     shape = list(og_samples.shape)
-    return og_samples + normal.sample(shape).reshape(shape)
+    pert_samples = og_samples + normal.sample(shape).reshape(shape)
+    pert_samples = torch.clamp(pert_samples, min=-0.4242, max=2.8215)
+    
+    return pert_samples
