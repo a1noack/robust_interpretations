@@ -15,7 +15,7 @@ def bp_matrix(batch_size, n_outputs):
 def rescale(sample):
     """Rescales RGB image so that each pixel value is between zero and one.
     """
-    sample = (sample+sample.min())/(sample.max()-sample.min())
+    sample = (sample-sample.min())/(sample.max()-sample.min())
     return sample
 
 def avg_norm_jacobian(net, x, n_outputs, bp_mat, for_loss=True):
@@ -36,14 +36,14 @@ def avg_norm_jacobian(net, x, n_outputs, bp_mat, for_loss=True):
     
     return j
 
-def norm_diff_interp(net, x, labels, dataset, ig=igs.simple_gradient, scale=.1):   
+def norm_diff_interp(net, x, labels, dataset, ig=igs.simple_gradient, scale=.1, for_loss=True):   
     """Gets the norm of the difference between the interpretations generated
     at original data points x and randomly perturbed points x_.
     Also returns the interpretations generated for all of the data points.
     """
     x_ = aus.perturb_randomly(x, dataset, scale=scale)
-    ix = ig(net, x, labels, normalize=False, used=False)
-    ix_ = ig(net, x_, labels, normalize=False, used=False)
+    ix = ig(net, x, labels, normalize=False, used=False, for_loss=for_loss)
+    ix_ = ig(net, x_, labels, normalize=False, used=False, for_loss=for_loss)
     if torch.isnan(ix).any() or torch.isnan(ix_).any():
         print(f'{torch.sum(torch.isnan(ix))/ix.shape[0]:2f} of ix are nan')
 

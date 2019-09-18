@@ -22,7 +22,7 @@ def smoothgrad(net, sample, label, j=15, scale=1., used=True):
     saliency = saliency/torch.sum(saliency)
     return saliency
 
-def simple_gradient(net, samples, labels, normalize=True, used=True):
+def simple_gradient(net, samples, labels, normalize=True, used=True, for_loss=False):
     """Parallelized version of simple gradient saliency map function.
     """
     if not used:
@@ -30,14 +30,17 @@ def simple_gradient(net, samples, labels, normalize=True, used=True):
     net(samples)
     logits = net.logits
     bp_mat = torch.nn.functional.one_hot(labels, num_classes=10).float()
-    grads = torch.autograd.grad(logits * bp_mat, samples, grad_outputs=bp_mat, create_graph=True)[0]#.squeeze()
+    grads = torch.autograd.grad(logits * bp_mat, samples, grad_outputs=bp_mat, create_graph=for_loss)[0]#.squeeze()
     saliency = torch.abs(grads)
     # this is needed to compress 3 channel map to 1 channel
     if saliency.shape[1] == 3:
         saliency = torch.mean(saliency, dim=1, keepdims=True)
+    # expected to have no channel dimension
+    saliency = saliency.squeeze()
     # normalize each saliency map by dividing each component of each saliency map
     # by the sum of the saliency map
     if normalize:
         totals = saliency.sum(dim=-1, keepdim=True).sum(dim=-2, keepdim=True).repeat(1,saliency.shape[-2],saliency.shape[-1])
-        saliency = torch.div(saliency, totals)
+        saliency = torch.div(saliency, totals).squeeze()
+    
     return saliency

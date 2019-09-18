@@ -19,12 +19,13 @@ class InterpAttacker():
         self.og_label = og_label
         self.can_attack = self._prediction_correct(sample)
         if not self.can_attack:
-            print("Network's prediction incorrect. Attacking is meaningless. Try attacking a different sample."); return
+            raise Exception("Network's prediction incorrect. Attacking is meaningless. Try attacking a different sample.")
         self.og_sample = torch.autograd.Variable(sample, requires_grad=True)
         self.k = k
         self.target = target
-        self.h = self.og_sample.shape[-1]
+        self.c = self.og_sample.shape[-3]
         self.w = self.og_sample.shape[-2]
+        self.h = self.og_sample.shape[-1]
     
     def _set_interp_generator(self, method='simple_gradient'):
         """Sets the mechanism used to create the interps.
@@ -49,7 +50,7 @@ class InterpAttacker():
         saliency = saliency.float()
         x_mesh, y_mesh = torch.meshgrid([torch.arange(self.w), torch.arange(self.h)])
         x_mesh, y_mesh = x_mesh.float(), y_mesh.float()
-        mass_center = torch.stack([torch.sum(saliency * x_mesh)/(self.w * self.h),torch.sum(saliency * y_mesh)/(self.w * self.h)])
+        mass_center = torch.stack([torch.sum(saliency * x_mesh)/(self.w * self.h), torch.sum(saliency * y_mesh)/(self.w * self.h)])
         return mass_center
     
     def _top_k(self, saliency):
@@ -79,14 +80,17 @@ class InterpAttacker():
         if invert:
             loss = -loss
         # norm of perturbation is always 28
-        perturbation = -torch.autograd.grad(loss, sample)[0].reshape(1, self.w, self.h)
+        perturbation = -torch.autograd.grad(loss, sample)[0].reshape(self.c, self.w, self.h)
         return torch.sign(perturbation)
 
     def _apply_perturbation(self, sample, perturbation, alpha):
         """Applies the perturbation to the sample.
         """
         sample = sample + alpha * perturbation
-        sample_clipped = sample.clamp(min=-0.4242, max=2.8215)
+        if self.c == 3:
+            sample_clipped = sample.clamp(min=-2.8, max=2.8215)
+        if self.c == 1:
+            sample_clipped = sample.clamp(min=-0.4242, max=2.8215)
         return sample_clipped
     
     def _check_measure(self, sample, measure):
