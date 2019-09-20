@@ -67,7 +67,7 @@ class InterpAttacker():
         input sample so as to alter the saliency map in the desired manner.
         """
         sample = torch.autograd.Variable(sample, requires_grad=True)
-        saliency = self.interp_generator(self.net_proxy, sample, self.og_label)
+        saliency = self.interp_generator(self.net_proxy, sample, self.og_label, for_loss=True)
         if attack_method == 'top-k':
             loss = torch.sum(self.og_top_k * saliency)
         elif attack_method == 'mass-center':
@@ -97,7 +97,7 @@ class InterpAttacker():
         """Checks to see how far the interp associated with 
         sample has moved from the original interp.
         """
-        saliency = self.interp_generator(self.net_proxy, sample, self.og_label, used=False)
+        saliency = self.interp_generator(self.net_proxy, sample, self.og_label, used=False, for_loss=True)
         if measure == 'intersection':
             value = torch.sum(self._top_k(saliency) * self.og_top_k) / self.k
         elif measure == 'correlation':
@@ -113,7 +113,7 @@ class InterpAttacker():
         """Performs the desired attack method for the desired number of iterations.
         """
         self._set_interp_generator(interp_to_attack)
-        self.og_saliency = self.interp_generator(self.net, self.og_sample, self.og_label)
+        self.og_saliency = self.interp_generator(self.net, self.og_sample, self.og_label, for_loss=True)
         self.og_mass_center = self._mass_center(self.og_saliency)
         self.og_top_k = self._top_k(self.og_saliency)
                 
