@@ -56,7 +56,24 @@ class DDNet(nn.Module):
         x = self.fc2_drop(self.fc2(x))
         self.logits = self.fc3(x)
         return F.log_softmax(self.logits, dim=1)
-        
-        
     
-   
+class SimpleCNN(nn.Module):
+    """Simple CNN architecture described in TensorFlow tutorial.
+    """
+    def __init__(self, activation=F.relu, p_drop=.4):
+        super(SimpleCNN, self).__init__()
+        self.activation = activation
+        self.logits = None
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=5, stride=1, padding=0)
+        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=5, stride=1, padding=0)
+        self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.pool2_drop = nn.Dropout(p=p_drop)
+        self.fc1 = nn.Linear(1024, 10)
+        
+    def forward(self, x):
+        x = self.pool1(self.activation(self.conv1(x)))
+        x = self.pool2(self.activation(self.conv2(x)))
+        x = self.pool2_drop(x.view(x.shape[0],-1))
+        self.logits = self.fc1(x)
+        return F.softmax(self.logits, dim=1)
