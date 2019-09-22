@@ -15,16 +15,13 @@ def generate_adv_exs(og_samples, true_labels, adversary, num_per_samp=1):
     
     return adv_samples, adv_labels
 
-def perturb_randomly(og_samples, dataset, scale=.1):
+def perturb_randomly(og_samples, scale=.1, min=-3., max=3.):
     """Add a random variable drawn from a normal distribution with 
     specified parameters to each dimension of each sample and return.
     """
     normal = tdist.Normal(loc=torch.tensor([0.]), scale=torch.tensor([scale]))
     shape = list(og_samples.shape)
     pert_samples = og_samples + normal.sample(shape).reshape(shape)
-    if dataset == 'MNIST':
-        pert_samples = torch.clamp(pert_samples, min=-0.4242, max=2.8215)
-    elif dataset == 'CIFAR-10':
-        pert_samples = torch.clamp(pert_samples, min=-2.8, max=2.8215)
+    pert_samples = torch.clamp(pert_samples, min=min, max=max)
     
     return pert_samples
