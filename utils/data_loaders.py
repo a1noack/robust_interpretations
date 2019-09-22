@@ -1,16 +1,17 @@
 import torchvision
 import torch 
+from utils.target_interps_dataset import MNIST_Interps_Dataset
 
 class DataLoader():
-    def __init__(self, dataset, tr_batch_size=64, te_batch_size=50, augment=True, path='./data'):
+    def __init__(self, dataset, tr_batch_size=64, te_batch_size=50, augment=True, model='simplecnn', path='./data'):
         if dataset == 'MNIST':
             self.tr_batch_size = tr_batch_size
             self.te_batch_size = te_batch_size
 
             # the mean of mnist pixel data is .1307 and the stddev is .3081
             self.data_preprocess = torchvision.transforms.Compose([
-                                    torchvision.transforms.ToTensor(),
-                                    torchvision.transforms.Normalize((0.1307,), (0.3081,))])
+                                    torchvision.transforms.ToTensor()])
+#                                     torchvision.transforms.Normalize((0.1307,), (0.3081,))])
 
             self.train_loader = torch.utils.data.DataLoader(
                                 torchvision.datasets.MNIST(path, train=True, download=True,
@@ -58,6 +59,23 @@ class DataLoader():
                                      transform=self.test_preprocess), 
                                 batch_size=te_batch_size, 
                                 shuffle=False)
+        elif dataset == 'MNIST_interps':
+            self.tr_batch_size = tr_batch_size
+            self.te_batch_size = te_batch_size
+            
+            self.train_data = MNIST_Interps_Dataset(
+                root=f'{path}/MNIST/{model}_mnist_interps/', 
+                mode='train', transform=None, interp_transform=None)
+            
+            self.train_loader = torch.utils.data.DataLoader(
+                self.train_data, batch_size=tr_batch_size, shuffle=True)
+            
+            self.test_data = MNIST_Interps_Dataset(
+                root=f'{path}/MNIST/{model}_mnist_interps/', 
+                mode='test', transform=None, interp_transform=None)
+            
+            self.test_loader = torch.utils.data.DataLoader(
+                self.test_data, batch_size=te_batch_size, shuffle=False)
         else:
             print(f'The {dataset} dataset is not supported yet.')
             
