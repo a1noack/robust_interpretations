@@ -1,37 +1,57 @@
-import torch
+from torchvision.datasets.vision import VisionDataset
 import os
-from pathlib import Path
-import torchvision
-from torch.utils import data
-    
-class MNIST_Interps_Dataset(torchvision.datasets.DatasetFolder):
-    def __init__(self, root, mode, transform, interp_transform):
-        super(MNIST_Interps_Dataset, self).__init__(f'{root}{mode}/', loader = torch.load, extensions = ('.pt'))
-        self.mode = mode
-        self.transform = transform
+import os.path
+import torch
+
+
+class MNIST_Interps_Dataset(VisionDataset):
+    classes = ['0 - zero', '1 - one', '2 - two', '3 - three', '4 - four',
+               '5 - five', '6 - six', '7 - seven', '8 - eight', '9 - nine']
+
+    def __init__(self, root, train=True, transform=None, target_transform=None, 
+                 interp_transform=None, thresh=None):
+        super(MNIST_Interps_Dataset, self).__init__(root, transform=transform,
+                                    target_transform=target_transform)
+        self.train = train  # training set or test set
         self.interp_transform = interp_transform
+        self.thresh = thresh
+
+        if self.train:
+            data_file = 'training.pt'
+        else:
+            data_file = 'test.pt'
+        self.data, self.targets, self.target_interps = torch.load(os.path.join(root, data_file))
 
     def __getitem__(self, index):
-        # override DatasetFolder's method
         """
         Args:
-          index (int): Index
+            index (int): Index
+
         Returns:
-          tuple: (sample, target, target_interp)
+            tuple: (image, target, target_interp) where target is index of the target class and target 
+                interp is the target saliency map for the prediction.
         """
-        path, target = self.samples[index]
-        sample = self.loader(path)
-        us_loc = path.rfind('_')
-        ext_loc = path.rfind('.')
-        my_index = path[us_loc+1:ext_loc]
-        saliency_path = os.path.join(Path(path).parents[2], f'{self.mode}_saliencies/label_{target}/saliency_{my_index}.pt')
-        saliency = self.loader(saliency_path)
-        
+        img, target, target_interp = self.data[index], int(self.targets[index]), self.target_interps[index]
+
         if self.transform is not None:
-            sample = self.transform(sample)
+            img = self.transform(img)
+
         if self.target_transform is not None:
             target = self.target_transform(target)
+        
         if self.interp_transform is not None:
-            saliency = self.interp_transform(saliency)
-            
-        return sample, target, saliency
+            target_interp = self.interp_transform(target_interp)
+        
+        if self.thresh != None:
+            std = target_interp.std()
+            mean = target_interp.mean()
+            target_interp = torch.where(target_interp > mean + self.thresh * std, target_interp, torch.tensor([0.]).cpu())
+
+        return img, target, target_interp
+
+    def __len__(self):
+        return len(self.data)
+
+    @property
+    def class_to_idx(self):
+        return {_class: i for i, _class in enumerate(self.classes)}

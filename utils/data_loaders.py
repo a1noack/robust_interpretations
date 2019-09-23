@@ -3,7 +3,7 @@ import torch
 from utils.target_interps_dataset import MNIST_Interps_Dataset
 
 class DataLoader():
-    def __init__(self, dataset, tr_batch_size=64, te_batch_size=50, augment=True, model='simplecnn', path='./data'):
+    def __init__(self, dataset, tr_batch_size=64, te_batch_size=50, augment=True, model='simplecnn', path='./data', thresh=None):
         if dataset == 'MNIST':
             self.tr_batch_size = tr_batch_size
             self.te_batch_size = te_batch_size
@@ -64,15 +64,13 @@ class DataLoader():
             self.te_batch_size = te_batch_size
             
             self.train_data = MNIST_Interps_Dataset(
-                root=f'{path}/MNIST/{model}_mnist_interps/', 
-                mode='train', transform=None, interp_transform=None)
+                root=f'{path}/MNIST/{model}_mnist_interps/', train=True, thresh=thresh)
             
             self.train_loader = torch.utils.data.DataLoader(
                 self.train_data, batch_size=tr_batch_size, shuffle=True)
             
             self.test_data = MNIST_Interps_Dataset(
-                root=f'{path}/MNIST/{model}_mnist_interps/', 
-                mode='test', transform=None, interp_transform=None)
+                root=f'{path}/MNIST/{model}_mnist_interps/', train=False, thresh=thresh)
             
             self.test_loader = torch.utils.data.DataLoader(
                 self.test_data, batch_size=te_batch_size, shuffle=False)
