@@ -1,7 +1,7 @@
 import torch
 import torch.distributions as tdist
 
-def smoothgrad(net, sample, label, normalize=True, j=50, scale=1., used=True):
+def smoothgrad(net, sample, label, normalize=True, j=50, scale=1., used=True, for_loss=False):
     """Creates smoothgrad saliency map. Unparallelized.
     """
     if not used:
@@ -14,7 +14,7 @@ def smoothgrad(net, sample, label, normalize=True, j=50, scale=1., used=True):
     net(samples)
     logits = net.logits 
     bp_mat = torch.nn.functional.one_hot(label.repeat(j+1,1), num_classes=logits.shape[1]).float().squeeze()
-    grads = torch.autograd.grad(logits * bp_mat, samples, grad_outputs=bp_mat, create_graph=True)[0].squeeze()
+    grads = torch.autograd.grad(logits * bp_mat, samples, grad_outputs=bp_mat, create_graph=for_loss)[0].squeeze()
     saliency = torch.abs(grads)
     saliency = saliency.mean(dim=0)
     if saliency.shape[0] == 3:
