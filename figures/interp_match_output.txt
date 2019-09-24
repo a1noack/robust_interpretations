@@ -1,0 +1,789 @@
+Epoch #1
+	Loss: 2.302015, Average norm of Jacobian: 0.002556, Norm of difference in interpretations: 1.145142
+	Loss: 1.794961, Average norm of Jacobian: 0.332941, Norm of difference in interpretations: 6.133467
+	Loss: 1.738459, Average norm of Jacobian: 0.443577, Norm of difference in interpretations: 9.629074
+	Loss: 1.566728, Average norm of Jacobian: 0.287748, Norm of difference in interpretations: 11.642480
+	Loss: 1.602690, Average norm of Jacobian: 0.263026, Norm of difference in interpretations: 13.430804
+	Ttest set accuracy: (85.96%)
+	PGD-perturbed test set accuracy: (58.13%)
+Epoch #2
+	Loss: 1.650705, Average norm of Jacobian: 0.488221, Norm of difference in interpretations: 13.006514
+	Loss: 1.580172, Average norm of Jacobian: 0.261305, Norm of difference in interpretations: 16.123606
+	Loss: 1.522096, Average norm of Jacobian: 0.244330, Norm of difference in interpretations: 18.252075
+	Loss: 1.536858, Average norm of Jacobian: 0.352778, Norm of difference in interpretations: 20.227837
+	Loss: 1.499931, Average norm of Jacobian: 0.171702, Norm of difference in interpretations: 21.163187
+	Ttest set accuracy: (96.63%)
+	PGD-perturbed test set accuracy: (71.06%)
+Epoch #3
+	Loss: 1.522856, Average norm of Jacobian: 0.188619, Norm of difference in interpretations: 23.112375
+	Loss: 1.521861, Average norm of Jacobian: 0.291705, Norm of difference in interpretations: 24.186207
+	Loss: 1.485014, Average norm of Jacobian: 0.359453, Norm of difference in interpretations: 24.984251
+	Loss: 1.525232, Average norm of Jacobian: 0.482490, Norm of difference in interpretations: 25.766790
+	Loss: 1.531437, Average norm of Jacobian: 0.137473, Norm of difference in interpretations: 25.404882
+	Ttest set accuracy: (97.37%)
+	PGD-perturbed test set accuracy: (70.41%)
+Epoch #4
+	Loss: 1.528895, Average norm of Jacobian: 0.490215, Norm of difference in interpretations: 26.727671
+	Loss: 1.531490, Average norm of Jacobian: 0.296630, Norm of difference in interpretations: 28.139624
+	Loss: 1.480445, Average norm of Jacobian: 0.277378, Norm of difference in interpretations: 30.156279
+	Loss: 1.504167, Average norm of Jacobian: 0.473895, Norm of difference in interpretations: 29.396971
+	Loss: 1.467428, Average norm of Jacobian: 0.302843, Norm of difference in interpretations: 32.165504
+	Ttest set accuracy: (97.52%)
+	PGD-perturbed test set accuracy: (73.02%)
+Epoch #5
+	Loss: 1.491490, Average norm of Jacobian: 0.328648, Norm of difference in interpretations: 30.939190
+	Loss: 1.484143, Average norm of Jacobian: 0.534543, Norm of difference in interpretations: 33.412224
+	Loss: 1.510598, Average norm of Jacobian: 0.298084, Norm of difference in interpretations: 31.240484
+	Loss: 1.533547, Average norm of Jacobian: 0.093833, Norm of difference in interpretations: 31.894903
+	Loss: 1.476739, Average norm of Jacobian: 0.220798, Norm of difference in interpretations: 33.383636
+	Ttest set accuracy: (97.92%)
+	PGD-perturbed test set accuracy: (74.42%)
+Epoch #6
+	Loss: 1.493884, Average norm of Jacobian: 0.240063, Norm of difference in interpretations: 33.847961
+	Loss: 1.490965, Average norm of Jacobian: 0.840485, Norm of difference in interpretations: 33.388607
+	Loss: 1.539722, Average norm of Jacobian: 0.561818, Norm of difference in interpretations: 36.112469
+	Loss: 1.515852, Average norm of Jacobian: 0.960106, Norm of difference in interpretations: 36.691559
+	Loss: 1.484759, Average norm of Jacobian: 0.101917, Norm of difference in interpretations: 35.725117
+	Ttest set accuracy: (97.84%)
+	PGD-perturbed test set accuracy: (75.17%)
+Epoch #7
+	Loss: 1.475669, Average norm of Jacobian: 0.261365, Norm of difference in interpretations: 34.416332
+	Loss: 1.482322, Average norm of Jacobian: 0.073913, Norm of difference in interpretations: 35.679466
+	Loss: 1.469872, Average norm of Jacobian: 0.411201, Norm of difference in interpretations: 36.382301
+	Loss: 1.477707, Average norm of Jacobian: 0.531659, Norm of difference in interpretations: 36.802078
+	Loss: 1.463338, Average norm of Jacobian: 0.612962, Norm of difference in interpretations: 38.028759
+	Ttest set accuracy: (98.08%)
+	PGD-perturbed test set accuracy: (77.01%)
+Epoch #8
+	Loss: 1.484839, Average norm of Jacobian: 0.045345, Norm of difference in interpretations: 37.912743
+	Loss: 1.504655, Average norm of Jacobian: 0.278673, Norm of difference in interpretations: 37.012672
+	Loss: 1.495491, Average norm of Jacobian: 0.286813, Norm of difference in interpretations: 37.913204
+	Loss: 1.512093, Average norm of Jacobian: 0.030809, Norm of difference in interpretations: 37.618713
+	Loss: 1.461700, Average norm of Jacobian: 0.014735, Norm of difference in interpretations: 38.167664
+	Ttest set accuracy: (98.37%)
+	PGD-perturbed test set accuracy: (79.13%)
+Epoch #9
+	Loss: 1.478583, Average norm of Jacobian: 0.480676, Norm of difference in interpretations: 37.228352
+	Loss: 1.462987, Average norm of Jacobian: 0.009851, Norm of difference in interpretations: 40.030357
+	Loss: 1.499715, Average norm of Jacobian: 0.406588, Norm of difference in interpretations: 39.179562
+	Loss: 1.491140, Average norm of Jacobian: 0.242411, Norm of difference in interpretations: 40.767876
+	Loss: 1.462899, Average norm of Jacobian: 0.106738, Norm of difference in interpretations: 38.306652
+	Ttest set accuracy: (98.44%)
+	PGD-perturbed test set accuracy: (78.70%)
+Epoch #10
+	Loss: 1.484230, Average norm of Jacobian: 0.941322, Norm of difference in interpretations: 40.243061
+	Loss: 1.464511, Average norm of Jacobian: 0.440898, Norm of difference in interpretations: 39.587513
+	Loss: 1.461852, Average norm of Jacobian: 0.203365, Norm of difference in interpretations: 40.947720
+	Loss: 1.474033, Average norm of Jacobian: 0.395964, Norm of difference in interpretations: 41.119694
+	Loss: 1.482255, Average norm of Jacobian: 0.257249, Norm of difference in interpretations: 42.089622
+	Ttest set accuracy: (98.44%)
+	PGD-perturbed test set accuracy: (80.03%)
+Epoch #11
+	Loss: 1.489333, Average norm of Jacobian: 0.109025, Norm of difference in interpretations: 42.787415
+	Loss: 1.465495, Average norm of Jacobian: 0.258855, Norm of difference in interpretations: 42.694725
+	Loss: 1.496418, Average norm of Jacobian: 0.280940, Norm of difference in interpretations: 41.652500
+	Loss: 1.484685, Average norm of Jacobian: 0.550958, Norm of difference in interpretations: 41.970287
+	Loss: 1.475650, Average norm of Jacobian: 0.195424, Norm of difference in interpretations: 41.749077
+	Ttest set accuracy: (98.53%)
+	PGD-perturbed test set accuracy: (80.53%)
+Epoch #12
+	Loss: 1.481022, Average norm of Jacobian: 0.636523, Norm of difference in interpretations: 41.489914
+	Loss: 1.492226, Average norm of Jacobian: 0.571790, Norm of difference in interpretations: 39.342236
+	Loss: 1.471574, Average norm of Jacobian: 0.065799, Norm of difference in interpretations: 40.356197
+	Loss: 1.476597, Average norm of Jacobian: 0.518160, Norm of difference in interpretations: 41.565170
+	Loss: 1.476605, Average norm of Jacobian: 0.433535, Norm of difference in interpretations: 42.576538
+	Ttest set accuracy: (98.55%)
+	PGD-perturbed test set accuracy: (80.67%)
+Epoch #13
+	Loss: 1.480903, Average norm of Jacobian: 0.321205, Norm of difference in interpretations: 42.505432
+	Loss: 1.462122, Average norm of Jacobian: 0.037282, Norm of difference in interpretations: 41.653191
+	Loss: 1.506154, Average norm of Jacobian: 1.095953, Norm of difference in interpretations: 40.350311
+	Loss: 1.482931, Average norm of Jacobian: 0.497346, Norm of difference in interpretations: 42.358959
+	Loss: 1.477748, Average norm of Jacobian: 0.152441, Norm of difference in interpretations: 40.337681
+	Ttest set accuracy: (98.60%)
+	PGD-perturbed test set accuracy: (80.61%)
+Epoch #14
+	Loss: 1.463979, Average norm of Jacobian: 0.052143, Norm of difference in interpretations: 40.814922
+	Loss: 1.493115, Average norm of Jacobian: 0.236570, Norm of difference in interpretations: 41.343647
+	Loss: 1.486290, Average norm of Jacobian: 0.501181, Norm of difference in interpretations: 41.919327
+	Loss: 1.483891, Average norm of Jacobian: 0.524202, Norm of difference in interpretations: 42.947845
+	Loss: 1.508370, Average norm of Jacobian: 0.388105, Norm of difference in interpretations: 40.830956
+	Ttest set accuracy: (98.64%)
+	PGD-perturbed test set accuracy: (80.74%)
+Epoch #15
+	Loss: 1.481544, Average norm of Jacobian: 0.143996, Norm of difference in interpretations: 44.563580
+	Loss: 1.488067, Average norm of Jacobian: 0.072152, Norm of difference in interpretations: 39.626675
+	Loss: 1.502533, Average norm of Jacobian: 0.581888, Norm of difference in interpretations: 41.562977
+	Loss: 1.466063, Average norm of Jacobian: 0.310809, Norm of difference in interpretations: 43.939030
+	Loss: 1.497051, Average norm of Jacobian: 0.148793, Norm of difference in interpretations: 41.152515
+	Ttest set accuracy: (98.64%)
+	PGD-perturbed test set accuracy: (80.53%)
+Epoch #16
+	Loss: 1.465049, Average norm of Jacobian: 0.545823, Norm of difference in interpretations: 41.721405
+	Loss: 1.491415, Average norm of Jacobian: 0.238281, Norm of difference in interpretations: 44.371025
+	Loss: 1.478148, Average norm of Jacobian: 0.171852, Norm of difference in interpretations: 43.117062
+	Loss: 1.477633, Average norm of Jacobian: 0.274068, Norm of difference in interpretations: 41.728996
+	Loss: 1.515085, Average norm of Jacobian: 0.243415, Norm of difference in interpretations: 41.278587
+	Ttest set accuracy: (98.64%)
+	PGD-perturbed test set accuracy: (80.21%)
+Epoch #17
+	Loss: 1.475704, Average norm of Jacobian: 0.357197, Norm of difference in interpretations: 41.338219
+	Loss: 1.480152, Average norm of Jacobian: 0.274983, Norm of difference in interpretations: 42.113308
+	Loss: 1.485787, Average norm of Jacobian: 0.592992, Norm of difference in interpretations: 42.320206
+	Loss: 1.527812, Average norm of Jacobian: 0.473780, Norm of difference in interpretations: 41.790733
+	Loss: 1.461361, Average norm of Jacobian: 0.347011, Norm of difference in interpretations: 41.751675
+	Ttest set accuracy: (98.65%)
+	PGD-perturbed test set accuracy: (80.23%)
+Epoch #18
+	Loss: 1.467335, Average norm of Jacobian: 0.304143, Norm of difference in interpretations: 42.115417
+	Loss: 1.469444, Average norm of Jacobian: 0.097309, Norm of difference in interpretations: 43.402363
+	Loss: 1.470872, Average norm of Jacobian: 0.315373, Norm of difference in interpretations: 41.697369
+	Loss: 1.503507, Average norm of Jacobian: 0.504272, Norm of difference in interpretations: 41.602539
+	Loss: 1.497922, Average norm of Jacobian: 0.158011, Norm of difference in interpretations: 40.375027
+	Ttest set accuracy: (98.64%)
+	PGD-perturbed test set accuracy: (80.65%)
+Epoch #19
+	Loss: 1.461952, Average norm of Jacobian: 0.180528, Norm of difference in interpretations: 42.537136
+	Loss: 1.484952, Average norm of Jacobian: 0.215391, Norm of difference in interpretations: 42.349396
+	Loss: 1.498998, Average norm of Jacobian: 0.237777, Norm of difference in interpretations: 42.682533
+	Loss: 1.476435, Average norm of Jacobian: 0.682852, Norm of difference in interpretations: 41.773224
+	Loss: 1.467519, Average norm of Jacobian: 0.412012, Norm of difference in interpretations: 42.206806
+	Ttest set accuracy: (98.65%)
+	PGD-perturbed test set accuracy: (80.14%)
+Epoch #20
+	Loss: 1.477982, Average norm of Jacobian: 0.245160, Norm of difference in interpretations: 42.852684
+	Loss: 1.465993, Average norm of Jacobian: 0.117559, Norm of difference in interpretations: 42.379051
+	Loss: 1.476981, Average norm of Jacobian: 0.022359, Norm of difference in interpretations: 42.749043
+	Loss: 1.468878, Average norm of Jacobian: 0.623015, Norm of difference in interpretations: 41.375999
+	Loss: 1.480042, Average norm of Jacobian: 0.460133, Norm of difference in interpretations: 39.076790
+	Ttest set accuracy: (98.67%)
+	PGD-perturbed test set accuracy: (80.33%)
+Epoch #21
+	Loss: 1.463400, Average norm of Jacobian: 0.189404, Norm of difference in interpretations: 42.000278
+	Loss: 1.482308, Average norm of Jacobian: 0.282903, Norm of difference in interpretations: 42.663399
+	Loss: 1.528065, Average norm of Jacobian: 0.788243, Norm of difference in interpretations: 41.183144
+	Loss: 1.486068, Average norm of Jacobian: 0.578765, Norm of difference in interpretations: 41.475811
+	Loss: 1.490861, Average norm of Jacobian: 0.315573, Norm of difference in interpretations: 41.406406
+	Ttest set accuracy: (98.68%)
+	PGD-perturbed test set accuracy: (80.26%)
+Epoch #22
+	Loss: 1.479429, Average norm of Jacobian: 0.180947, Norm of difference in interpretations: 42.086704
+	Loss: 1.473827, Average norm of Jacobian: 0.160900, Norm of difference in interpretations: 42.503765
+	Loss: 1.483237, Average norm of Jacobian: 0.232290, Norm of difference in interpretations: 42.610771
+	Loss: 1.494414, Average norm of Jacobian: 0.029239, Norm of difference in interpretations: 43.642677
+	Loss: 1.479751, Average norm of Jacobian: 0.341199, Norm of difference in interpretations: 42.170887
+	Ttest set accuracy: (98.71%)
+	PGD-perturbed test set accuracy: (80.44%)
+Epoch #23
+	Loss: 1.483598, Average norm of Jacobian: 0.524452, Norm of difference in interpretations: 41.762211
+	Loss: 1.510580, Average norm of Jacobian: 0.241624, Norm of difference in interpretations: 39.884033
+	Loss: 1.490840, Average norm of Jacobian: 0.345414, Norm of difference in interpretations: 42.212971
+	Loss: 1.468923, Average norm of Jacobian: 0.336274, Norm of difference in interpretations: 40.002258
+	Loss: 1.461309, Average norm of Jacobian: 0.062063, Norm of difference in interpretations: 39.572868
+	Ttest set accuracy: (98.70%)
+	PGD-perturbed test set accuracy: (80.39%)
+Epoch #24
+	Loss: 1.477939, Average norm of Jacobian: 0.689701, Norm of difference in interpretations: 41.060780
+	Loss: 1.461492, Average norm of Jacobian: 0.190037, Norm of difference in interpretations: 42.361938
+	Loss: 1.498290, Average norm of Jacobian: 0.359968, Norm of difference in interpretations: 41.752056
+	Loss: 1.475011, Average norm of Jacobian: 0.490380, Norm of difference in interpretations: 41.317467
+	Loss: 1.461306, Average norm of Jacobian: 0.052473, Norm of difference in interpretations: 41.235523
+	Ttest set accuracy: (98.70%)
+	PGD-perturbed test set accuracy: (80.41%)
+Epoch #25
+	Loss: 1.462264, Average norm of Jacobian: 0.056206, Norm of difference in interpretations: 42.708496
+	Loss: 1.494714, Average norm of Jacobian: 0.424624, Norm of difference in interpretations: 42.647118
+	Loss: 1.492294, Average norm of Jacobian: 0.562765, Norm of difference in interpretations: 41.175262
+	Loss: 1.475000, Average norm of Jacobian: 0.116941, Norm of difference in interpretations: 41.740314
+	Loss: 1.476849, Average norm of Jacobian: 0.430698, Norm of difference in interpretations: 42.826500
+	Ttest set accuracy: (98.65%)
+	PGD-perturbed test set accuracy: (80.21%)
+Epoch #26
+	Loss: 1.487626, Average norm of Jacobian: 0.214564, Norm of difference in interpretations: 42.760818
+	Loss: 1.476564, Average norm of Jacobian: 0.303720, Norm of difference in interpretations: 40.722904
+	Loss: 1.474409, Average norm of Jacobian: 0.106781, Norm of difference in interpretations: 41.744724
+	Loss: 1.500875, Average norm of Jacobian: 0.049439, Norm of difference in interpretations: 41.010544
+	Loss: 1.478353, Average norm of Jacobian: 0.494534, Norm of difference in interpretations: 42.141243
+	Ttest set accuracy: (98.68%)
+	PGD-perturbed test set accuracy: (80.22%)
+Epoch #27
+	Loss: 1.486123, Average norm of Jacobian: 0.228954, Norm of difference in interpretations: 42.074299
+	Loss: 1.484915, Average norm of Jacobian: 0.315104, Norm of difference in interpretations: 42.653343
+	Loss: 1.475788, Average norm of Jacobian: 0.088512, Norm of difference in interpretations: 40.672970
+	Loss: 1.472720, Average norm of Jacobian: 0.367472, Norm of difference in interpretations: 44.524906
+	Loss: 1.489582, Average norm of Jacobian: 0.370018, Norm of difference in interpretations: 39.415070
+	Ttest set accuracy: (98.68%)
+	PGD-perturbed test set accuracy: (80.42%)
+Epoch #28
+	Loss: 1.483646, Average norm of Jacobian: 0.298600, Norm of difference in interpretations: 40.441826
+	Loss: 1.492442, Average norm of Jacobian: 0.368222, Norm of difference in interpretations: 42.488064
+	Loss: 1.500586, Average norm of Jacobian: 0.789903, Norm of difference in interpretations: 43.201984
+	Loss: 1.479448, Average norm of Jacobian: 0.412378, Norm of difference in interpretations: 39.283981
+	Loss: 1.489251, Average norm of Jacobian: 0.202141, Norm of difference in interpretations: 43.523045
+	Ttest set accuracy: (98.69%)
+	PGD-perturbed test set accuracy: (80.36%)
+Epoch #29
+	Loss: 1.507515, Average norm of Jacobian: 0.625689, Norm of difference in interpretations: 41.960121
+	Loss: 1.496202, Average norm of Jacobian: 0.269078, Norm of difference in interpretations: 43.572151
+	Loss: 1.510641, Average norm of Jacobian: 0.218931, Norm of difference in interpretations: 39.832317
+	Loss: 1.497968, Average norm of Jacobian: 0.448443, Norm of difference in interpretations: 43.242626
+	Loss: 1.497168, Average norm of Jacobian: 0.281617, Norm of difference in interpretations: 40.725365
+	Ttest set accuracy: (98.71%)
+	PGD-perturbed test set accuracy: (80.47%)
+Epoch #30
+	Loss: 1.499341, Average norm of Jacobian: 0.562183, Norm of difference in interpretations: 41.062252
+	Loss: 1.499377, Average norm of Jacobian: 0.314883, Norm of difference in interpretations: 42.364418
+	Loss: 1.467669, Average norm of Jacobian: 0.298191, Norm of difference in interpretations: 40.378227
+	Loss: 1.477757, Average norm of Jacobian: 0.281464, Norm of difference in interpretations: 40.601772
+	Loss: 1.463613, Average norm of Jacobian: 0.247224, Norm of difference in interpretations: 42.466789
+	Ttest set accuracy: (98.69%)
+	PGD-perturbed test set accuracy: (80.35%)
+Epoch #1
+	Loss: 2.359522, Average norm of Jacobian: 0.002842, Norm of difference in interpretations: 1.230196
+	Loss: 1.838968, Average norm of Jacobian: 0.154166, Norm of difference in interpretations: 5.907332
+	Loss: 1.610268, Average norm of Jacobian: 0.210146, Norm of difference in interpretations: 11.051918
+	Loss: 1.620835, Average norm of Jacobian: 0.210428, Norm of difference in interpretations: 12.767882
+	Loss: 1.598201, Average norm of Jacobian: 0.341080, Norm of difference in interpretations: 14.096977
+	Ttest set accuracy: (86.84%)
+	PGD-perturbed test set accuracy: (61.54%)
+Epoch #2
+	Loss: 1.608034, Average norm of Jacobian: 0.459275, Norm of difference in interpretations: 13.976046
+	Loss: 1.616543, Average norm of Jacobian: 0.367514, Norm of difference in interpretations: 15.638245
+	Loss: 1.636779, Average norm of Jacobian: 0.256034, Norm of difference in interpretations: 15.579051
+	Loss: 1.571575, Average norm of Jacobian: 0.326233, Norm of difference in interpretations: 16.420422
+	Loss: 1.552239, Average norm of Jacobian: 0.140336, Norm of difference in interpretations: 17.730366
+	Ttest set accuracy: (96.69%)
+	PGD-perturbed test set accuracy: (70.96%)
+Epoch #3
+	Loss: 1.514728, Average norm of Jacobian: 0.195717, Norm of difference in interpretations: 18.837763
+	Loss: 1.550833, Average norm of Jacobian: 0.200131, Norm of difference in interpretations: 18.440113
+	Loss: 1.529195, Average norm of Jacobian: 0.072267, Norm of difference in interpretations: 18.751062
+	Loss: 1.552707, Average norm of Jacobian: 0.192819, Norm of difference in interpretations: 18.071878
+	Loss: 1.534329, Average norm of Jacobian: 0.266887, Norm of difference in interpretations: 18.900543
+	Ttest set accuracy: (97.52%)
+	PGD-perturbed test set accuracy: (74.79%)
+Epoch #4
+	Loss: 1.544062, Average norm of Jacobian: 0.252166, Norm of difference in interpretations: 20.179050
+	Loss: 1.566840, Average norm of Jacobian: 0.326423, Norm of difference in interpretations: 20.061947
+	Loss: 1.533272, Average norm of Jacobian: 0.114604, Norm of difference in interpretations: 21.254406
+	Loss: 1.561302, Average norm of Jacobian: 0.240887, Norm of difference in interpretations: 21.141478
+	Loss: 1.550819, Average norm of Jacobian: 0.285461, Norm of difference in interpretations: 20.332979
+	Ttest set accuracy: (97.87%)
+	PGD-perturbed test set accuracy: (76.22%)
+Epoch #5
+	Loss: 1.523166, Average norm of Jacobian: 0.109254, Norm of difference in interpretations: 20.870209
+	Loss: 1.520685, Average norm of Jacobian: 0.038887, Norm of difference in interpretations: 21.368240
+	Loss: 1.521185, Average norm of Jacobian: 0.162592, Norm of difference in interpretations: 21.308043
+	Loss: 1.545559, Average norm of Jacobian: 0.303494, Norm of difference in interpretations: 20.890751
+	Loss: 1.520905, Average norm of Jacobian: 0.147360, Norm of difference in interpretations: 21.050379
+	Ttest set accuracy: (98.04%)
+	PGD-perturbed test set accuracy: (76.99%)
+Epoch #6
+	Loss: 1.559687, Average norm of Jacobian: 0.330518, Norm of difference in interpretations: 21.228607
+	Loss: 1.535167, Average norm of Jacobian: 0.341542, Norm of difference in interpretations: 22.376993
+	Loss: 1.547014, Average norm of Jacobian: 0.359091, Norm of difference in interpretations: 22.472063
+	Loss: 1.530238, Average norm of Jacobian: 0.183006, Norm of difference in interpretations: 22.900337
+	Loss: 1.544427, Average norm of Jacobian: 0.301504, Norm of difference in interpretations: 23.041317
+	Ttest set accuracy: (98.29%)
+	PGD-perturbed test set accuracy: (78.16%)
+Epoch #7
+	Loss: 1.529004, Average norm of Jacobian: 0.231220, Norm of difference in interpretations: 23.170614
+	Loss: 1.522894, Average norm of Jacobian: 0.159170, Norm of difference in interpretations: 21.815485
+	Loss: 1.506319, Average norm of Jacobian: 0.069809, Norm of difference in interpretations: 21.616026
+	Loss: 1.542463, Average norm of Jacobian: 0.135032, Norm of difference in interpretations: 23.045370
+	Loss: 1.556123, Average norm of Jacobian: 0.271892, Norm of difference in interpretations: 22.403490
+	Ttest set accuracy: (98.35%)
+	PGD-perturbed test set accuracy: (78.40%)
+Epoch #8
+	Loss: 1.538165, Average norm of Jacobian: 0.186555, Norm of difference in interpretations: 23.052696
+	Loss: 1.522463, Average norm of Jacobian: 0.073538, Norm of difference in interpretations: 22.884859
+	Loss: 1.509402, Average norm of Jacobian: 0.108748, Norm of difference in interpretations: 22.789009
+	Loss: 1.529560, Average norm of Jacobian: 0.214411, Norm of difference in interpretations: 23.079029
+	Loss: 1.562689, Average norm of Jacobian: 0.127805, Norm of difference in interpretations: 22.829388
+	Ttest set accuracy: (98.50%)
+	PGD-perturbed test set accuracy: (78.49%)
+Epoch #9
+	Loss: 1.542964, Average norm of Jacobian: 0.274194, Norm of difference in interpretations: 24.212349
+	Loss: 1.545908, Average norm of Jacobian: 0.198444, Norm of difference in interpretations: 23.678526
+	Loss: 1.516401, Average norm of Jacobian: 0.140297, Norm of difference in interpretations: 23.966665
+	Loss: 1.548424, Average norm of Jacobian: 0.133080, Norm of difference in interpretations: 23.549931
+	Loss: 1.537840, Average norm of Jacobian: 0.071813, Norm of difference in interpretations: 23.517593
+	Ttest set accuracy: (98.56%)
+	PGD-perturbed test set accuracy: (79.45%)
+Epoch #10
+	Loss: 1.526520, Average norm of Jacobian: 0.157400, Norm of difference in interpretations: 23.528709
+	Loss: 1.559308, Average norm of Jacobian: 0.318875, Norm of difference in interpretations: 24.584846
+	Loss: 1.529934, Average norm of Jacobian: 0.262019, Norm of difference in interpretations: 24.382345
+	Loss: 1.515681, Average norm of Jacobian: 0.047497, Norm of difference in interpretations: 23.908871
+	Loss: 1.506452, Average norm of Jacobian: 0.033907, Norm of difference in interpretations: 23.828421
+	Ttest set accuracy: (98.62%)
+	PGD-perturbed test set accuracy: (79.72%)
+Epoch #11
+	Loss: 1.512792, Average norm of Jacobian: 0.067883, Norm of difference in interpretations: 23.408039
+	Loss: 1.525070, Average norm of Jacobian: 0.386892, Norm of difference in interpretations: 23.604065
+	Loss: 1.521005, Average norm of Jacobian: 0.124239, Norm of difference in interpretations: 23.333828
+	Loss: 1.537905, Average norm of Jacobian: 0.159986, Norm of difference in interpretations: 23.410166
+	Loss: 1.554578, Average norm of Jacobian: 0.226256, Norm of difference in interpretations: 23.508150
+	Ttest set accuracy: (98.69%)
+	PGD-perturbed test set accuracy: (80.51%)
+Epoch #12
+	Loss: 1.546112, Average norm of Jacobian: 0.241299, Norm of difference in interpretations: 24.113949
+	Loss: 1.515552, Average norm of Jacobian: 0.297761, Norm of difference in interpretations: 24.581205
+	Loss: 1.528416, Average norm of Jacobian: 0.086501, Norm of difference in interpretations: 24.497232
+	Loss: 1.542850, Average norm of Jacobian: 0.171607, Norm of difference in interpretations: 24.378736
+	Loss: 1.525246, Average norm of Jacobian: 0.032122, Norm of difference in interpretations: 23.996128
+	Ttest set accuracy: (98.69%)
+	PGD-perturbed test set accuracy: (80.05%)
+Epoch #13
+	Loss: 1.522127, Average norm of Jacobian: 0.194555, Norm of difference in interpretations: 23.232239
+	Loss: 1.531603, Average norm of Jacobian: 0.149576, Norm of difference in interpretations: 24.101664
+	Loss: 1.511701, Average norm of Jacobian: 0.085613, Norm of difference in interpretations: 23.373125
+	Loss: 1.522900, Average norm of Jacobian: 0.120104, Norm of difference in interpretations: 24.618601
+	Loss: 1.536114, Average norm of Jacobian: 0.112301, Norm of difference in interpretations: 23.483576
+	Ttest set accuracy: (98.73%)
+	PGD-perturbed test set accuracy: (80.38%)
+Epoch #14
+	Loss: 1.504692, Average norm of Jacobian: 0.054231, Norm of difference in interpretations: 23.317888
+	Loss: 1.521070, Average norm of Jacobian: 0.418011, Norm of difference in interpretations: 23.793549
+	Loss: 1.518852, Average norm of Jacobian: 0.033115, Norm of difference in interpretations: 24.127518
+	Loss: 1.520217, Average norm of Jacobian: 0.111586, Norm of difference in interpretations: 25.131607
+	Loss: 1.523785, Average norm of Jacobian: 0.016988, Norm of difference in interpretations: 24.118019
+	Ttest set accuracy: (98.71%)
+	PGD-perturbed test set accuracy: (80.54%)
+Epoch #15
+	Loss: 1.515071, Average norm of Jacobian: 0.145955, Norm of difference in interpretations: 24.655359
+	Loss: 1.559244, Average norm of Jacobian: 0.429191, Norm of difference in interpretations: 24.344219
+	Loss: 1.567283, Average norm of Jacobian: 0.415542, Norm of difference in interpretations: 23.532061
+	Loss: 1.545981, Average norm of Jacobian: 0.290049, Norm of difference in interpretations: 23.481270
+	Loss: 1.525339, Average norm of Jacobian: 0.176157, Norm of difference in interpretations: 24.888391
+	Ttest set accuracy: (98.74%)
+	PGD-perturbed test set accuracy: (80.62%)
+Epoch #16
+	Loss: 1.510205, Average norm of Jacobian: 0.005319, Norm of difference in interpretations: 24.187159
+	Loss: 1.506242, Average norm of Jacobian: 0.135772, Norm of difference in interpretations: 22.737772
+	Loss: 1.527297, Average norm of Jacobian: 0.337274, Norm of difference in interpretations: 25.075375
+	Loss: 1.542836, Average norm of Jacobian: 0.338718, Norm of difference in interpretations: 23.485767
+	Loss: 1.509087, Average norm of Jacobian: 0.049597, Norm of difference in interpretations: 23.556595
+	Ttest set accuracy: (98.72%)
+	PGD-perturbed test set accuracy: (80.42%)
+Epoch #17
+	Loss: 1.508250, Average norm of Jacobian: 0.182535, Norm of difference in interpretations: 23.233858
+	Loss: 1.504374, Average norm of Jacobian: 0.093694, Norm of difference in interpretations: 23.693108
+	Loss: 1.552031, Average norm of Jacobian: 0.215011, Norm of difference in interpretations: 24.662840
+	Loss: 1.524451, Average norm of Jacobian: 0.035914, Norm of difference in interpretations: 24.750563
+	Loss: 1.511211, Average norm of Jacobian: 0.111349, Norm of difference in interpretations: 24.200350
+	Ttest set accuracy: (98.73%)
+	PGD-perturbed test set accuracy: (80.67%)
+Epoch #18
+	Loss: 1.539588, Average norm of Jacobian: 0.114580, Norm of difference in interpretations: 24.111828
+	Loss: 1.512785, Average norm of Jacobian: 0.192449, Norm of difference in interpretations: 23.527784
+	Loss: 1.549399, Average norm of Jacobian: 0.326721, Norm of difference in interpretations: 24.313175
+	Loss: 1.505364, Average norm of Jacobian: 0.002576, Norm of difference in interpretations: 23.540960
+	Loss: 1.537158, Average norm of Jacobian: 0.185233, Norm of difference in interpretations: 24.170969
+	Ttest set accuracy: (98.73%)
+	PGD-perturbed test set accuracy: (80.53%)
+Epoch #19
+	Loss: 1.515961, Average norm of Jacobian: 0.047159, Norm of difference in interpretations: 24.446861
+	Loss: 1.517232, Average norm of Jacobian: 0.042116, Norm of difference in interpretations: 25.564161
+	Loss: 1.507737, Average norm of Jacobian: 0.126550, Norm of difference in interpretations: 23.571472
+	Loss: 1.523078, Average norm of Jacobian: 0.140088, Norm of difference in interpretations: 24.228123
+	Loss: 1.541699, Average norm of Jacobian: 0.160993, Norm of difference in interpretations: 24.326170
+	Ttest set accuracy: (98.74%)
+	PGD-perturbed test set accuracy: (80.30%)
+Epoch #20
+	Loss: 1.519669, Average norm of Jacobian: 0.012518, Norm of difference in interpretations: 23.322184
+	Loss: 1.537177, Average norm of Jacobian: 0.149221, Norm of difference in interpretations: 24.325752
+	Loss: 1.537593, Average norm of Jacobian: 0.533342, Norm of difference in interpretations: 23.438021
+	Loss: 1.523407, Average norm of Jacobian: 0.212594, Norm of difference in interpretations: 23.491795
+	Loss: 1.523162, Average norm of Jacobian: 0.139678, Norm of difference in interpretations: 23.588360
+	Ttest set accuracy: (98.73%)
+	PGD-perturbed test set accuracy: (80.35%)
+Epoch #21
+	Loss: 1.537696, Average norm of Jacobian: 0.326346, Norm of difference in interpretations: 23.462391
+	Loss: 1.511962, Average norm of Jacobian: 0.172149, Norm of difference in interpretations: 24.012121
+	Loss: 1.516078, Average norm of Jacobian: 0.038266, Norm of difference in interpretations: 24.477707
+	Loss: 1.537328, Average norm of Jacobian: 0.383684, Norm of difference in interpretations: 24.723728
+	Loss: 1.513693, Average norm of Jacobian: 0.058620, Norm of difference in interpretations: 24.367334
+	Ttest set accuracy: (98.76%)
+	PGD-perturbed test set accuracy: (80.56%)
+Epoch #22
+	Loss: 1.518353, Average norm of Jacobian: 0.001687, Norm of difference in interpretations: 24.631454
+	Loss: 1.513776, Average norm of Jacobian: 0.122079, Norm of difference in interpretations: 23.759106
+	Loss: 1.515690, Average norm of Jacobian: 0.101435, Norm of difference in interpretations: 24.009912
+	Loss: 1.506497, Average norm of Jacobian: 0.147843, Norm of difference in interpretations: 24.193005
+	Loss: 1.532467, Average norm of Jacobian: 0.222158, Norm of difference in interpretations: 23.741018
+	Ttest set accuracy: (98.77%)
+	PGD-perturbed test set accuracy: (80.45%)
+Epoch #23
+	Loss: 1.512574, Average norm of Jacobian: 0.045903, Norm of difference in interpretations: 24.389713
+	Loss: 1.519400, Average norm of Jacobian: 0.268864, Norm of difference in interpretations: 23.189747
+	Loss: 1.531703, Average norm of Jacobian: 0.326120, Norm of difference in interpretations: 24.252363
+	Loss: 1.526048, Average norm of Jacobian: 0.114843, Norm of difference in interpretations: 24.870998
+	Loss: 1.529672, Average norm of Jacobian: 0.056614, Norm of difference in interpretations: 24.420341
+	Ttest set accuracy: (98.77%)
+	PGD-perturbed test set accuracy: (80.40%)
+Epoch #24
+	Loss: 1.531200, Average norm of Jacobian: 0.199817, Norm of difference in interpretations: 24.077326
+	Loss: 1.524443, Average norm of Jacobian: 0.030202, Norm of difference in interpretations: 23.703213
+	Loss: 1.525429, Average norm of Jacobian: 0.029550, Norm of difference in interpretations: 24.500935
+	Loss: 1.513512, Average norm of Jacobian: 0.179576, Norm of difference in interpretations: 23.780621
+	Loss: 1.535054, Average norm of Jacobian: 0.143926, Norm of difference in interpretations: 23.662716
+	Ttest set accuracy: (98.78%)
+	PGD-perturbed test set accuracy: (80.80%)
+Epoch #25
+	Loss: 1.526402, Average norm of Jacobian: 0.196622, Norm of difference in interpretations: 24.263767
+	Loss: 1.527015, Average norm of Jacobian: 0.249368, Norm of difference in interpretations: 24.113655
+	Loss: 1.537765, Average norm of Jacobian: 0.110226, Norm of difference in interpretations: 23.643499
+	Loss: 1.518860, Average norm of Jacobian: 0.343746, Norm of difference in interpretations: 24.265558
+	Loss: 1.520443, Average norm of Jacobian: 0.200496, Norm of difference in interpretations: 23.727169
+	Ttest set accuracy: (98.77%)
+	PGD-perturbed test set accuracy: (80.66%)
+Epoch #26
+	Loss: 1.530271, Average norm of Jacobian: 0.230100, Norm of difference in interpretations: 23.832575
+	Loss: 1.537546, Average norm of Jacobian: 0.088385, Norm of difference in interpretations: 23.566477
+	Loss: 1.512924, Average norm of Jacobian: 0.137305, Norm of difference in interpretations: 24.302589
+	Loss: 1.522343, Average norm of Jacobian: 0.257608, Norm of difference in interpretations: 24.813892
+	Loss: 1.522776, Average norm of Jacobian: 0.159380, Norm of difference in interpretations: 23.894560
+	Ttest set accuracy: (98.75%)
+	PGD-perturbed test set accuracy: (80.57%)
+Epoch #27
+	Loss: 1.513953, Average norm of Jacobian: 0.124088, Norm of difference in interpretations: 24.095570
+	Loss: 1.512977, Average norm of Jacobian: 0.113400, Norm of difference in interpretations: 23.945017
+	Loss: 1.517643, Average norm of Jacobian: 0.035492, Norm of difference in interpretations: 23.729309
+	Loss: 1.544002, Average norm of Jacobian: 0.605698, Norm of difference in interpretations: 24.201696
+	Loss: 1.566542, Average norm of Jacobian: 0.323489, Norm of difference in interpretations: 24.531792
+	Ttest set accuracy: (98.77%)
+	PGD-perturbed test set accuracy: (80.64%)
+Epoch #28
+	Loss: 1.517394, Average norm of Jacobian: 0.158215, Norm of difference in interpretations: 23.632736
+	Loss: 1.514199, Average norm of Jacobian: 0.075351, Norm of difference in interpretations: 24.398336
+	Loss: 1.534011, Average norm of Jacobian: 0.087668, Norm of difference in interpretations: 23.763073
+	Loss: 1.534747, Average norm of Jacobian: 0.179677, Norm of difference in interpretations: 24.147659
+	Loss: 1.505814, Average norm of Jacobian: 0.016302, Norm of difference in interpretations: 23.911232
+	Ttest set accuracy: (98.76%)
+	PGD-perturbed test set accuracy: (80.53%)
+Epoch #29
+	Loss: 1.527261, Average norm of Jacobian: 0.234517, Norm of difference in interpretations: 24.638041
+	Loss: 1.516790, Average norm of Jacobian: 0.076870, Norm of difference in interpretations: 23.892536
+	Loss: 1.535304, Average norm of Jacobian: 0.199880, Norm of difference in interpretations: 23.720770
+	Loss: 1.531281, Average norm of Jacobian: 0.184087, Norm of difference in interpretations: 24.119867
+	Loss: 1.532211, Average norm of Jacobian: 0.134510, Norm of difference in interpretations: 23.136219
+	Ttest set accuracy: (98.81%)
+	PGD-perturbed test set accuracy: (80.64%)
+Epoch #30
+	Loss: 1.522704, Average norm of Jacobian: 0.104600, Norm of difference in interpretations: 23.512463
+	Loss: 1.543609, Average norm of Jacobian: 0.319216, Norm of difference in interpretations: 24.619349
+	Loss: 1.522301, Average norm of Jacobian: 0.291563, Norm of difference in interpretations: 24.611996
+	Loss: 1.531921, Average norm of Jacobian: 0.212941, Norm of difference in interpretations: 24.331776
+	Loss: 1.554151, Average norm of Jacobian: 0.281751, Norm of difference in interpretations: 24.560492
+	Ttest set accuracy: (98.75%)
+	PGD-perturbed test set accuracy: (80.50%)
+Epoch #1
+	Loss: 2.536614, Average norm of Jacobian: 0.002346, Norm of difference in interpretations: 1.085548
+	Loss: 2.113868, Average norm of Jacobian: 0.362871, Norm of difference in interpretations: 5.859368
+	Loss: 1.954059, Average norm of Jacobian: 0.752274, Norm of difference in interpretations: 9.945543
+	Loss: 1.943871, Average norm of Jacobian: 0.563737, Norm of difference in interpretations: 10.706162
+	Loss: 1.851621, Average norm of Jacobian: 0.356790, Norm of difference in interpretations: 11.879485
+	Ttest set accuracy: (78.35%)
+	PGD-perturbed test set accuracy: (58.90%)
+Epoch #2
+	Loss: 1.914280, Average norm of Jacobian: 0.448203, Norm of difference in interpretations: 11.997098
+	Loss: 1.838267, Average norm of Jacobian: 0.488682, Norm of difference in interpretations: 13.753822
+	Loss: 1.844231, Average norm of Jacobian: 0.394620, Norm of difference in interpretations: 13.563977
+	Loss: 1.866321, Average norm of Jacobian: 0.373299, Norm of difference in interpretations: 14.158811
+	Loss: 1.919896, Average norm of Jacobian: 0.327113, Norm of difference in interpretations: 13.857390
+	Ttest set accuracy: (79.62%)
+	PGD-perturbed test set accuracy: (63.35%)
+Epoch #3
+	Loss: 1.808034, Average norm of Jacobian: 0.326968, Norm of difference in interpretations: 15.314900
+	Loss: 1.872955, Average norm of Jacobian: 0.501037, Norm of difference in interpretations: 14.741438
+	Loss: 1.801265, Average norm of Jacobian: 0.535996, Norm of difference in interpretations: 16.359421
+	Loss: 1.746408, Average norm of Jacobian: 0.210596, Norm of difference in interpretations: 16.739305
+	Loss: 1.710323, Average norm of Jacobian: 0.224310, Norm of difference in interpretations: 16.311754
+	Ttest set accuracy: (88.42%)
+	PGD-perturbed test set accuracy: (69.95%)
+Epoch #4
+	Loss: 1.755769, Average norm of Jacobian: 0.551982, Norm of difference in interpretations: 17.166065
+	Loss: 1.732307, Average norm of Jacobian: 0.279213, Norm of difference in interpretations: 18.507582
+	Loss: 1.761996, Average norm of Jacobian: 0.244241, Norm of difference in interpretations: 17.472603
+	Loss: 1.732577, Average norm of Jacobian: 0.495969, Norm of difference in interpretations: 18.329084
+	Loss: 1.749587, Average norm of Jacobian: 0.394097, Norm of difference in interpretations: 17.221560
+	Ttest set accuracy: (88.74%)
+	PGD-perturbed test set accuracy: (71.08%)
+Epoch #5
+	Loss: 1.788618, Average norm of Jacobian: 0.557815, Norm of difference in interpretations: 17.803484
+	Loss: 1.770441, Average norm of Jacobian: 0.390874, Norm of difference in interpretations: 18.642757
+	Loss: 1.816132, Average norm of Jacobian: 0.359744, Norm of difference in interpretations: 18.469587
+	Loss: 1.714052, Average norm of Jacobian: 0.367854, Norm of difference in interpretations: 19.002064
+	Loss: 1.729595, Average norm of Jacobian: 0.481496, Norm of difference in interpretations: 18.769409
+	Ttest set accuracy: (88.76%)
+	PGD-perturbed test set accuracy: (71.54%)
+Epoch #6
+	Loss: 1.700575, Average norm of Jacobian: 0.259521, Norm of difference in interpretations: 19.313547
+	Loss: 1.742616, Average norm of Jacobian: 0.339924, Norm of difference in interpretations: 19.210882
+	Loss: 1.792409, Average norm of Jacobian: 0.383840, Norm of difference in interpretations: 19.469604
+	Loss: 1.775612, Average norm of Jacobian: 0.694077, Norm of difference in interpretations: 19.248808
+	Loss: 1.728321, Average norm of Jacobian: 0.477392, Norm of difference in interpretations: 19.086493
+	Ttest set accuracy: (88.95%)
+	PGD-perturbed test set accuracy: (73.64%)
+Epoch #7
+	Loss: 1.699271, Average norm of Jacobian: 0.167904, Norm of difference in interpretations: 19.475822
+	Loss: 1.731485, Average norm of Jacobian: 0.485333, Norm of difference in interpretations: 20.124557
+	Loss: 1.807096, Average norm of Jacobian: 0.880892, Norm of difference in interpretations: 19.601696
+	Loss: 1.712544, Average norm of Jacobian: 0.303333, Norm of difference in interpretations: 20.667202
+	Loss: 1.760101, Average norm of Jacobian: 0.386347, Norm of difference in interpretations: 18.984266
+	Ttest set accuracy: (89.02%)
+	PGD-perturbed test set accuracy: (74.03%)
+Epoch #8
+	Loss: 1.719743, Average norm of Jacobian: 0.369559, Norm of difference in interpretations: 19.904526
+	Loss: 1.725855, Average norm of Jacobian: 0.454554, Norm of difference in interpretations: 19.750534
+	Loss: 1.731866, Average norm of Jacobian: 0.366422, Norm of difference in interpretations: 20.403952
+	Loss: 1.721534, Average norm of Jacobian: 0.278498, Norm of difference in interpretations: 19.378351
+	Loss: 1.785235, Average norm of Jacobian: 0.496386, Norm of difference in interpretations: 20.791967
+	Ttest set accuracy: (89.00%)
+	PGD-perturbed test set accuracy: (74.00%)
+Epoch #9
+	Loss: 1.717470, Average norm of Jacobian: 0.355233, Norm of difference in interpretations: 19.433126
+	Loss: 1.700223, Average norm of Jacobian: 0.217452, Norm of difference in interpretations: 20.093069
+	Loss: 1.832043, Average norm of Jacobian: 0.593062, Norm of difference in interpretations: 19.480476
+	Loss: 1.677931, Average norm of Jacobian: 0.178141, Norm of difference in interpretations: 19.826614
+	Loss: 1.709300, Average norm of Jacobian: 0.297845, Norm of difference in interpretations: 20.403631
+	Ttest set accuracy: (89.18%)
+	PGD-perturbed test set accuracy: (74.05%)
+Epoch #10
+	Loss: 1.738358, Average norm of Jacobian: 0.283060, Norm of difference in interpretations: 20.833071
+	Loss: 1.701917, Average norm of Jacobian: 0.354857, Norm of difference in interpretations: 21.267923
+	Loss: 1.727114, Average norm of Jacobian: 0.396668, Norm of difference in interpretations: 20.423981
+	Loss: 1.829996, Average norm of Jacobian: 0.707495, Norm of difference in interpretations: 19.645796
+	Loss: 1.744011, Average norm of Jacobian: 0.427106, Norm of difference in interpretations: 19.616808
+	Ttest set accuracy: (89.23%)
+	PGD-perturbed test set accuracy: (74.04%)
+Epoch #11
+	Loss: 1.748521, Average norm of Jacobian: 0.319375, Norm of difference in interpretations: 20.978090
+	Loss: 1.725163, Average norm of Jacobian: 0.604724, Norm of difference in interpretations: 20.230549
+	Loss: 1.694209, Average norm of Jacobian: 0.313252, Norm of difference in interpretations: 20.794596
+	Loss: 1.723209, Average norm of Jacobian: 0.501315, Norm of difference in interpretations: 20.339878
+	Loss: 1.658208, Average norm of Jacobian: 0.078011, Norm of difference in interpretations: 21.171886
+	Ttest set accuracy: (89.26%)
+	PGD-perturbed test set accuracy: (74.80%)
+Epoch #12
+	Loss: 1.711307, Average norm of Jacobian: 0.381776, Norm of difference in interpretations: 21.301931
+	Loss: 1.789964, Average norm of Jacobian: 0.669033, Norm of difference in interpretations: 20.532419
+	Loss: 1.716581, Average norm of Jacobian: 0.305284, Norm of difference in interpretations: 20.930187
+	Loss: 1.740775, Average norm of Jacobian: 0.543933, Norm of difference in interpretations: 20.882963
+	Loss: 1.692463, Average norm of Jacobian: 0.441483, Norm of difference in interpretations: 20.917574
+	Ttest set accuracy: (89.21%)
+	PGD-perturbed test set accuracy: (74.73%)
+Epoch #13
+	Loss: 1.739137, Average norm of Jacobian: 0.470854, Norm of difference in interpretations: 20.238789
+	Loss: 1.698860, Average norm of Jacobian: 0.295429, Norm of difference in interpretations: 20.109266
+	Loss: 1.731068, Average norm of Jacobian: 0.263883, Norm of difference in interpretations: 21.239622
+	Loss: 1.758322, Average norm of Jacobian: 0.502707, Norm of difference in interpretations: 21.246023
+	Loss: 1.700468, Average norm of Jacobian: 0.396360, Norm of difference in interpretations: 21.645035
+	Ttest set accuracy: (89.26%)
+	PGD-perturbed test set accuracy: (74.86%)
+Epoch #14
+	Loss: 1.714994, Average norm of Jacobian: 0.276487, Norm of difference in interpretations: 20.974209
+	Loss: 1.733725, Average norm of Jacobian: 0.492209, Norm of difference in interpretations: 20.712399
+	Loss: 1.667277, Average norm of Jacobian: 0.252069, Norm of difference in interpretations: 21.483057
+	Loss: 1.748300, Average norm of Jacobian: 0.607458, Norm of difference in interpretations: 20.286150
+	Loss: 1.722078, Average norm of Jacobian: 0.400878, Norm of difference in interpretations: 20.700817
+	Ttest set accuracy: (89.21%)
+	PGD-perturbed test set accuracy: (74.98%)
+Epoch #15
+	Loss: 1.763824, Average norm of Jacobian: 0.441267, Norm of difference in interpretations: 20.684387
+	Loss: 1.768415, Average norm of Jacobian: 0.510580, Norm of difference in interpretations: 20.084898
+	Loss: 1.653732, Average norm of Jacobian: 0.167722, Norm of difference in interpretations: 20.911554
+	Loss: 1.705645, Average norm of Jacobian: 0.237308, Norm of difference in interpretations: 20.851278
+	Loss: 1.719644, Average norm of Jacobian: 0.324551, Norm of difference in interpretations: 21.084795
+	Ttest set accuracy: (89.25%)
+	PGD-perturbed test set accuracy: (75.08%)
+Epoch #16
+	Loss: 1.734706, Average norm of Jacobian: 0.521107, Norm of difference in interpretations: 20.829447
+	Loss: 1.699502, Average norm of Jacobian: 0.460052, Norm of difference in interpretations: 21.805986
+	Loss: 1.722158, Average norm of Jacobian: 0.562459, Norm of difference in interpretations: 20.928547
+	Loss: 1.702343, Average norm of Jacobian: 0.312056, Norm of difference in interpretations: 21.754843
+	Loss: 1.759617, Average norm of Jacobian: 0.262494, Norm of difference in interpretations: 20.428768
+	Ttest set accuracy: (89.19%)
+	PGD-perturbed test set accuracy: (74.61%)
+Epoch #17
+	Loss: 1.831293, Average norm of Jacobian: 0.519157, Norm of difference in interpretations: 20.525749
+	Loss: 1.708891, Average norm of Jacobian: 0.186867, Norm of difference in interpretations: 22.254982
+	Loss: 1.718899, Average norm of Jacobian: 0.313517, Norm of difference in interpretations: 20.270758
+	Loss: 1.717579, Average norm of Jacobian: 0.324297, Norm of difference in interpretations: 21.087704
+	Loss: 1.713556, Average norm of Jacobian: 0.241296, Norm of difference in interpretations: 20.401083
+	Ttest set accuracy: (89.24%)
+	PGD-perturbed test set accuracy: (74.80%)
+Epoch #18
+	Loss: 1.760067, Average norm of Jacobian: 0.530483, Norm of difference in interpretations: 20.378677
+	Loss: 1.755665, Average norm of Jacobian: 0.543588, Norm of difference in interpretations: 20.444324
+	Loss: 1.753340, Average norm of Jacobian: 0.650462, Norm of difference in interpretations: 20.997057
+	Loss: 1.757330, Average norm of Jacobian: 0.384531, Norm of difference in interpretations: 20.790312
+	Loss: 1.695924, Average norm of Jacobian: 0.391826, Norm of difference in interpretations: 20.636633
+	Ttest set accuracy: (89.25%)
+	PGD-perturbed test set accuracy: (75.03%)
+Epoch #19
+	Loss: 1.731770, Average norm of Jacobian: 0.399371, Norm of difference in interpretations: 20.395620
+	Loss: 1.706344, Average norm of Jacobian: 0.403137, Norm of difference in interpretations: 20.722607
+	Loss: 1.769940, Average norm of Jacobian: 0.385959, Norm of difference in interpretations: 20.640751
+	Loss: 1.706132, Average norm of Jacobian: 0.342850, Norm of difference in interpretations: 20.422091
+	Loss: 1.747725, Average norm of Jacobian: 0.647249, Norm of difference in interpretations: 19.703327
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (75.01%)
+Epoch #20
+	Loss: 1.731936, Average norm of Jacobian: 0.465620, Norm of difference in interpretations: 21.111324
+	Loss: 1.712565, Average norm of Jacobian: 0.388777, Norm of difference in interpretations: 21.061054
+	Loss: 1.808791, Average norm of Jacobian: 0.617654, Norm of difference in interpretations: 19.761166
+	Loss: 1.774535, Average norm of Jacobian: 0.643567, Norm of difference in interpretations: 20.129765
+	Loss: 1.752560, Average norm of Jacobian: 0.352822, Norm of difference in interpretations: 20.344355
+	Ttest set accuracy: (89.24%)
+	PGD-perturbed test set accuracy: (74.82%)
+Epoch #21
+	Loss: 1.696139, Average norm of Jacobian: 0.373150, Norm of difference in interpretations: 20.641558
+	Loss: 1.737358, Average norm of Jacobian: 0.464506, Norm of difference in interpretations: 21.254892
+	Loss: 1.706762, Average norm of Jacobian: 0.335601, Norm of difference in interpretations: 21.185246
+	Loss: 1.674407, Average norm of Jacobian: 0.226039, Norm of difference in interpretations: 21.265978
+	Loss: 1.717050, Average norm of Jacobian: 0.457292, Norm of difference in interpretations: 21.857023
+	Ttest set accuracy: (89.26%)
+	PGD-perturbed test set accuracy: (74.82%)
+Epoch #22
+	Loss: 1.726170, Average norm of Jacobian: 0.442233, Norm of difference in interpretations: 21.034740
+	Loss: 1.790147, Average norm of Jacobian: 0.607170, Norm of difference in interpretations: 21.257549
+	Loss: 1.744085, Average norm of Jacobian: 0.559849, Norm of difference in interpretations: 20.704519
+	Loss: 1.718404, Average norm of Jacobian: 0.352267, Norm of difference in interpretations: 20.520168
+	Loss: 1.820350, Average norm of Jacobian: 0.588371, Norm of difference in interpretations: 19.722948
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (75.02%)
+Epoch #23
+	Loss: 1.751897, Average norm of Jacobian: 0.667274, Norm of difference in interpretations: 21.077169
+	Loss: 1.718322, Average norm of Jacobian: 0.382678, Norm of difference in interpretations: 20.900869
+	Loss: 1.766358, Average norm of Jacobian: 0.651863, Norm of difference in interpretations: 20.784557
+	Loss: 1.758482, Average norm of Jacobian: 0.352722, Norm of difference in interpretations: 20.873747
+	Loss: 1.720388, Average norm of Jacobian: 0.493955, Norm of difference in interpretations: 20.036688
+	Ttest set accuracy: (89.26%)
+	PGD-perturbed test set accuracy: (74.95%)
+Epoch #24
+	Loss: 1.773449, Average norm of Jacobian: 0.517749, Norm of difference in interpretations: 20.769861
+	Loss: 1.704342, Average norm of Jacobian: 0.280958, Norm of difference in interpretations: 20.947783
+	Loss: 1.730426, Average norm of Jacobian: 0.214334, Norm of difference in interpretations: 20.512577
+	Loss: 1.771480, Average norm of Jacobian: 0.460962, Norm of difference in interpretations: 20.450314
+	Loss: 1.689931, Average norm of Jacobian: 0.305936, Norm of difference in interpretations: 21.055916
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (75.04%)
+Epoch #25
+	Loss: 1.744468, Average norm of Jacobian: 0.563063, Norm of difference in interpretations: 20.550589
+	Loss: 1.717989, Average norm of Jacobian: 0.196039, Norm of difference in interpretations: 20.702278
+	Loss: 1.761074, Average norm of Jacobian: 0.570941, Norm of difference in interpretations: 20.403343
+	Loss: 1.768516, Average norm of Jacobian: 0.467978, Norm of difference in interpretations: 20.887053
+	Loss: 1.719412, Average norm of Jacobian: 0.376462, Norm of difference in interpretations: 21.391167
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (75.03%)
+Epoch #26
+	Loss: 1.725382, Average norm of Jacobian: 0.584164, Norm of difference in interpretations: 20.981619
+	Loss: 1.767024, Average norm of Jacobian: 0.551370, Norm of difference in interpretations: 20.152246
+	Loss: 1.716742, Average norm of Jacobian: 0.375599, Norm of difference in interpretations: 21.176540
+	Loss: 1.723664, Average norm of Jacobian: 0.451835, Norm of difference in interpretations: 20.817905
+	Loss: 1.771914, Average norm of Jacobian: 0.706401, Norm of difference in interpretations: 20.213772
+	Ttest set accuracy: (89.26%)
+	PGD-perturbed test set accuracy: (74.99%)
+Epoch #27
+	Loss: 1.681220, Average norm of Jacobian: 0.320207, Norm of difference in interpretations: 20.897217
+	Loss: 1.707802, Average norm of Jacobian: 0.445404, Norm of difference in interpretations: 20.769829
+	Loss: 1.688972, Average norm of Jacobian: 0.228912, Norm of difference in interpretations: 19.513275
+	Loss: 1.724841, Average norm of Jacobian: 0.429620, Norm of difference in interpretations: 21.069262
+	Loss: 1.736250, Average norm of Jacobian: 0.466310, Norm of difference in interpretations: 20.741005
+	Ttest set accuracy: (89.26%)
+	PGD-perturbed test set accuracy: (74.90%)
+Epoch #28
+	Loss: 1.683876, Average norm of Jacobian: 0.253484, Norm of difference in interpretations: 20.342554
+	Loss: 1.752433, Average norm of Jacobian: 0.383040, Norm of difference in interpretations: 20.714083
+	Loss: 1.834790, Average norm of Jacobian: 0.693173, Norm of difference in interpretations: 19.892202
+	Loss: 1.688783, Average norm of Jacobian: 0.235207, Norm of difference in interpretations: 20.883135
+	Loss: 1.735782, Average norm of Jacobian: 0.517249, Norm of difference in interpretations: 20.985485
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (74.88%)
+Epoch #29
+	Loss: 1.735499, Average norm of Jacobian: 0.578517, Norm of difference in interpretations: 21.408649
+	Loss: 1.750723, Average norm of Jacobian: 0.610813, Norm of difference in interpretations: 20.849190
+	Loss: 1.755242, Average norm of Jacobian: 0.331614, Norm of difference in interpretations: 20.616268
+	Loss: 1.754094, Average norm of Jacobian: 0.451805, Norm of difference in interpretations: 20.158432
+	Loss: 1.749956, Average norm of Jacobian: 0.522263, Norm of difference in interpretations: 21.277227
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (75.02%)
+Epoch #30
+	Loss: 1.708299, Average norm of Jacobian: 0.332738, Norm of difference in interpretations: 21.641041
+	Loss: 1.664202, Average norm of Jacobian: 0.205852, Norm of difference in interpretations: 19.503538
+	Loss: 1.819806, Average norm of Jacobian: 0.583134, Norm of difference in interpretations: 19.943928
+	Loss: 1.688433, Average norm of Jacobian: 0.173484, Norm of difference in interpretations: 21.268953
+	Loss: 1.759272, Average norm of Jacobian: 0.420685, Norm of difference in interpretations: 20.828146
+	Ttest set accuracy: (89.27%)
+	PGD-perturbed test set accuracy: (74.96%)
+Epoch #1
+	Loss: 2.700411, Average norm of Jacobian: 0.003253, Norm of difference in interpretations: 1.270204
+	Loss: 2.250075, Average norm of Jacobian: 0.379905, Norm of difference in interpretations: 5.891356
+	Loss: 2.005023, Average norm of Jacobian: 0.443747, Norm of difference in interpretations: 10.516380
+	Loss: 1.939749, Average norm of Jacobian: 0.455798, Norm of difference in interpretations: 11.597783
+	Loss: 1.936206, Average norm of Jacobian: 0.354385, Norm of difference in interpretations: 12.444020
+	Ttest set accuracy: (87.38%)
+	PGD-perturbed test set accuracy: (65.43%)
+Epoch #2
+	Loss: 1.964109, Average norm of Jacobian: 0.377678, Norm of difference in interpretations: 13.581721
+	Loss: 1.889228, Average norm of Jacobian: 0.350642, Norm of difference in interpretations: 14.489263
+	Loss: 1.870037, Average norm of Jacobian: 0.338850, Norm of difference in interpretations: 14.379797
+	Loss: 1.876926, Average norm of Jacobian: 0.179100, Norm of difference in interpretations: 16.088629
+	Loss: 1.917207, Average norm of Jacobian: 0.291419, Norm of difference in interpretations: 16.176533
+	Ttest set accuracy: (88.83%)
+	PGD-perturbed test set accuracy: (69.92%)
+Epoch #3
+	Loss: 1.930459, Average norm of Jacobian: 0.488003, Norm of difference in interpretations: 15.567161
+	Loss: 1.938299, Average norm of Jacobian: 0.461847, Norm of difference in interpretations: 16.368172
+	Loss: 1.927504, Average norm of Jacobian: 0.289423, Norm of difference in interpretations: 17.712332
+	Loss: 1.890342, Average norm of Jacobian: 0.354857, Norm of difference in interpretations: 17.896843
+	Loss: 1.841048, Average norm of Jacobian: 0.465686, Norm of difference in interpretations: 17.430281
+	Ttest set accuracy: (89.28%)
+	PGD-perturbed test set accuracy: (71.19%)
+Epoch #4
+	Loss: 1.867325, Average norm of Jacobian: 0.372270, Norm of difference in interpretations: 18.509214
+	Loss: 1.867959, Average norm of Jacobian: 0.346881, Norm of difference in interpretations: 18.136145
+	Loss: 1.820459, Average norm of Jacobian: 0.260612, Norm of difference in interpretations: 18.729969
+	Loss: 1.789445, Average norm of Jacobian: 0.141463, Norm of difference in interpretations: 19.056059
+	Loss: 1.795488, Average norm of Jacobian: 0.214536, Norm of difference in interpretations: 18.504669
+	Ttest set accuracy: (98.00%)
+	PGD-perturbed test set accuracy: (77.87%)
+Epoch #5
+	Loss: 1.779992, Average norm of Jacobian: 0.293245, Norm of difference in interpretations: 18.707645
+	Loss: 1.796939, Average norm of Jacobian: 0.113517, Norm of difference in interpretations: 20.569290
+	Loss: 1.842130, Average norm of Jacobian: 0.550585, Norm of difference in interpretations: 20.000921
+	Loss: 1.789554, Average norm of Jacobian: 0.226595, Norm of difference in interpretations: 19.637304
+	Loss: 1.793711, Average norm of Jacobian: 0.139549, Norm of difference in interpretations: 20.295542
+	Ttest set accuracy: (98.20%)
+	PGD-perturbed test set accuracy: (79.27%)
+Epoch #6
+	Loss: 1.758185, Average norm of Jacobian: 0.030534, Norm of difference in interpretations: 20.391047
+	Loss: 1.781442, Average norm of Jacobian: 0.294775, Norm of difference in interpretations: 19.707432
+	Loss: 1.774921, Average norm of Jacobian: 0.159375, Norm of difference in interpretations: 20.549725
+	Loss: 1.790973, Average norm of Jacobian: 0.198576, Norm of difference in interpretations: 20.212635
+	Loss: 1.779384, Average norm of Jacobian: 0.241541, Norm of difference in interpretations: 20.653059
+	Ttest set accuracy: (98.40%)
+	PGD-perturbed test set accuracy: (79.81%)
+Epoch #7
+	Loss: 1.760546, Average norm of Jacobian: 0.069152, Norm of difference in interpretations: 20.717356
+	Loss: 1.737009, Average norm of Jacobian: 0.056585, Norm of difference in interpretations: 20.409220
+	Loss: 1.790259, Average norm of Jacobian: 0.378478, Norm of difference in interpretations: 20.417480
+	Loss: 1.758038, Average norm of Jacobian: 0.161906, Norm of difference in interpretations: 20.866669
+	Loss: 1.768141, Average norm of Jacobian: 0.179857, Norm of difference in interpretations: 20.398771
+	Ttest set accuracy: (98.44%)
+	PGD-perturbed test set accuracy: (79.39%)
+Epoch #8
+	Loss: 1.759065, Average norm of Jacobian: 0.159328, Norm of difference in interpretations: 20.767433
+	Loss: 1.776773, Average norm of Jacobian: 0.212901, Norm of difference in interpretations: 19.552202
+	Loss: 1.771053, Average norm of Jacobian: 0.198010, Norm of difference in interpretations: 21.824303
+	Loss: 1.799315, Average norm of Jacobian: 0.453668, Norm of difference in interpretations: 20.885855
+	Loss: 1.752210, Average norm of Jacobian: 0.049868, Norm of difference in interpretations: 20.916349
+	Ttest set accuracy: (98.36%)
+	PGD-perturbed test set accuracy: (79.21%)
+Epoch #9
+	Loss: 1.766402, Average norm of Jacobian: 0.374901, Norm of difference in interpretations: 20.745989
+0
+0
+
