@@ -10,8 +10,8 @@ def generate_adv_exs(og_samples, true_labels, adversary, num_per_samp=1):
     adv_samples = []
     for i in range(num_per_samp):
         adv_samples.append(adversary.perturb(og_samples, true_labels))
-    adv_samples = torch.cat(adv_samples, 0)
-    adv_labels = torch.cat([true_labels]*num_per_samp, 0)
+    adv_samples = torch.cat(adv_samples, dim=0)
+    adv_labels = torch.cat([true_labels]*num_per_samp, dim=0)
     
     return adv_samples, adv_labels
 

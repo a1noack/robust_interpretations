@@ -8,6 +8,7 @@ class LeNet(nn.Module):
         super(LeNet, self).__init__()
         self.activation = activation
         self.logits = None
+        self.probabilities = None
         self.conv1 = nn.Conv2d(1, 6, kernel_size=5, stride=1, padding=2)
         self.pool1 = nn.MaxPool2d(kernel_size=2)
         self.conv2 = nn.Conv2d(6, 16, kernel_size=5, stride=1, padding=0)
@@ -25,7 +26,8 @@ class LeNet(nn.Module):
         x = self.fc1_drop(self.activation(self.fc1(x)))
         x = self.fc2_drop(self.activation(self.fc2(x)))
         self.logits = self.fc3(x)
-        return F.log_softmax(self.logits, dim=1)
+        self.probabilities = F.log_softmax(self.logits, dim=1)
+        return self.logits
     
 class DDNet(nn.Module):
     """CIFAR-10 DDNet. Described here: https://arxiv.org/abs/1511.04508.
@@ -34,6 +36,7 @@ class DDNet(nn.Module):
         super(DDNet, self).__init__()
         self.activation = activation
         self.logits = None
+        self.probabilities = None
         self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=0)
         self.conv2 = nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=0)
         self.pool1 = nn.MaxPool2d(kernel_size=2)
@@ -55,7 +58,8 @@ class DDNet(nn.Module):
         x = self.fc1_drop(self.fc1(x))
         x = self.fc2_drop(self.fc2(x))
         self.logits = self.fc3(x)
-        return F.log_softmax(self.logits, dim=1)
+        self.probabilities = F.log_softmax(self.logits, dim=1)
+        return self.logits
     
 class SimpleCNN(nn.Module):
     """Simple CNN architecture described in TensorFlow tutorial.
@@ -64,16 +68,20 @@ class SimpleCNN(nn.Module):
         super(SimpleCNN, self).__init__()
         self.activation = activation
         self.logits = None
-        self.conv1 = nn.Conv2d(1, 32, kernel_size=5, stride=1, padding=0)
+        self.probabilities = None
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=5, stride=1, padding=2)
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=5, stride=1, padding=0)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=5, stride=1, padding=2)
         self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.pool2_drop = nn.Dropout(p=p_drop)
-        self.fc1 = nn.Linear(1024, 10)
+        self.fc1 = nn.Linear(7*7*64, 1024)
+        self.fc2 = nn.Linear(1024, 10)
         
     def forward(self, x):
         x = self.pool1(self.activation(self.conv1(x)))
         x = self.pool2(self.activation(self.conv2(x)))
         x = self.pool2_drop(x.view(x.shape[0],-1))
-        self.logits = self.fc1(x)
-        return F.softmax(self.logits, dim=1)
+        x = self.fc1(x)
+        self.logits = self.fc2(x)
+        self.probabilities = F.softmax(self.logits, dim=1)
+        return self.logits
