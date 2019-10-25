@@ -120,10 +120,23 @@ class CIFAR10_Interps_Dataset(VisionDataset):
         self.thresh = thresh
 
         if self.train:
-            data_file = 'training.pt'
+            file_names = [f'training{i}.pt' for i in range(5000, 50001, 5000)]
         else:
-            data_file = 'test.pt'
-        self.data, self.targets, self.target_interps = torch.load(os.path.join(root, data_file))
+            file_names = ['test5000.pt', 'test10000.pt']
+            
+        init = True
+        for file_name in file_names:
+            samples, targets, target_interps = torch.load(os.path.join(root, file_name))
+
+            if init:
+                self.data = samples
+                self.targets = targets
+                self.target_interps = target_interps
+                init = False
+            else:
+                self.data = torch.cat([self.data, samples], dim=0)
+                self.targets = torch.cat([self.targets, targets], dim=0)
+                self.target_interps = torch.cat([self.target_interps, target_interps], dim=0)
 
     def __getitem__(self, index):
         """
