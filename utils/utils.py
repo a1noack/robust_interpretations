@@ -16,6 +16,7 @@ def rescale(sample):
     """Rescales RGB image so that each pixel value is between zero and one.
     """
     sample = (sample-sample.min())/(sample.max()-sample.min())
+    
     return sample
 
 def avg_norm_jacobian(net, x, n_outputs, bp_mat, for_loss=True):
@@ -24,15 +25,15 @@ def avg_norm_jacobian(net, x, n_outputs, bp_mat, for_loss=True):
     """
     batch_size = x.shape[0]
     # needed because some edge-case batches are not standard size
-    if bp_mat.shape[0]/n_outputs != batch_size:     
+    if bp_mat.shape[0]/n_outputs != batch_size:
         bp_mat = bp_matrix(batch_size, n_outputs)
     x = x.repeat(n_outputs, 1, 1, 1)
     x = Variable(x, requires_grad=True)
     # needed so that we can get gradient of output w.r.t input
     y = net(x)
     x_grad = torch.autograd.grad(y, x, grad_outputs=bp_mat, create_graph=for_loss)[0]
-    # get sum of squared values of the gradient values
-    j = x_grad.pow(2).sum() / batch_size
+#     j = x_grad.pow(2).sum() / batch_size
+    j = x_grad.pow(2).sum().sqrt()
     
     return j
 
@@ -49,7 +50,7 @@ def norm_diff_interp(net, x, labels, ig=igs.simple_gradient, scale=.1, for_loss=
 
     return torch.norm(torch.abs(ix - ix_)), torch.cat([ix, ix_], dim=0)
 
-def interp_match_loss(output, labels, x=None, target_interps=None, net=None, optimizer=None, alpha=0, for_loss=True):
+def interp_match_loss(output, labels, x=None, target_interps=None, alpha=0, net=None, optimizer=None, for_loss=True):
     """Adds norm of difference between salience
     maps generated at each sample and target salience maps for each sample
     to the empirical loss.
@@ -63,6 +64,16 @@ def interp_match_loss(output, labels, x=None, target_interps=None, net=None, opt
         interp_match_loss = torch.norm(torch.abs(interps - target_interps))
         loss = loss + alpha * interp_match_loss
         optimizer.zero_grad()
+    
+    return loss
+
+def jacobian_loss(output, labels, x=None, alpha=0, net=None, bp_mat=None, optimizer=None):
+    n_outputs = output.shape[1]
+    j = avg_norm_jacobian(net, x, n_outputs, bp_mat)
+#     loss = loss + (alpha_jr / 2) * j
+    loss = F.cross_entropy(output, labels) + alpha * j
+    # needed so gradients don't accumulate in leaf variables when calling loss.backward in train function
+    optimizer.zero_grad()
     
     return loss
     
@@ -90,7 +101,7 @@ def my_loss(output, labels, net=None,
     if alpha_jr != 0:
         n_outputs = output.shape[1]
         j = avg_norm_jacobian(net, x, n_outputs, bp_mat)
-        loss = loss + (alpha_jr / 2) * j
+        loss = loss + alpha_jr * j
         # needed so gradients don't accumulate in leaf variables when calling loss.backward in train function
         optimizer.zero_grad()
     
