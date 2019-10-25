@@ -103,7 +103,7 @@ class DataLoader():
             self.train_loader = torch.utils.data.DataLoader(
                 self.train_data, batch_size=tr_batch_size, shuffle=True)
             
-            self.test_data = MNIST_Interps_Dataset(
+            self.test_data = CIFAR10_Interps_Dataset(
                 root=f'{path}/ddnet_cifar10_interps/', train=False, thresh=thresh)
             self.test_loader = torch.utils.data.DataLoader(
                 self.test_data, batch_size=te_batch_size, shuffle=False)
