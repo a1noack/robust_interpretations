@@ -18,7 +18,7 @@ def smoothgrad(net, sample, label, normalize=True, abs_val=True, j=50, scale=1.,
         saliency = torch.abs(grads)
     saliency = saliency.mean(dim=0)
     if saliency.shape[0] == 3:
-        saliency = torch.max(saliency, dim=0, keepdims=True)[0]
+        saliency = torch.mean(saliency, dim=0, keepdims=True)[0]
     if normalize:
         saliency = saliency/torch.sum(saliency)
         
@@ -38,7 +38,7 @@ def simple_gradient(net, samples, labels, normalize=True, abs_val=True, used=Tru
     # this is needed to compress 3 channel map to 1 channel
     # changed from mean to max
     if saliency.shape[1] == 3:
-        saliency = torch.max(saliency, dim=1, keepdims=True)[0]
+        saliency = torch.mean(saliency, dim=1, keepdims=True)[0]
     # expected to have no channel dimension
     saliency = saliency.squeeze()
     # normalize each saliency map by dividing each component of each saliency map
